@@ -3,20 +3,30 @@
 import GlobalLayout from '../layouts/GlobalLayout.astro';
 ---
 
-<GlobalLayout>
-  <!-- Hero Section -->
-  <section class="bg-blue-900 text-white py-20 lg:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-        Moving From Uncertainty to Clarity and Confidence
-      </h1>
-      <p class="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-        We help families from all walks of life make informed financial choices that support both today's needs and tomorrow's goals.
-      </p>
+<GlobalLayout title="Who We Help | Families, Individuals, Professionals & Business Owners" description="We help families, individuals, professionals, and business owners move from uncertainty to clarity. Customized financial education and protection strategies.">
+  <!-- Hero Section (Updated with Split Layout) -->
+  <section class="bg-blue-900 text-white py-20 lg:py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <div class="text-center lg:text-left">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+          Moving From Uncertainty to Clarity and Confidence
+        </h1>
+        <p class="text-xl text-blue-100 leading-relaxed">
+          We help families from all walks of life make informed financial choices that support both today's needs and tomorrow's goals.
+        </p>
+      </div>
+
+      <!-- Hero Image: Clarity/Horizon -->
+      <!-- Save as 'clarity-horizon' in public folder -->
+      <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-800 hidden lg:block h-80">
+        <img loading="lazy" src="/clarity-horizon.png" alt="Professional looking toward a bright horizon" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
+      </div>
+
     </div>
   </section>
 
-  <!-- Core Audiences Grid -->
+  <!-- Core Audiences Grid (Updated with Card Images) -->
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -26,40 +36,57 @@ import GlobalLayout from '../layouts/GlobalLayout.astro';
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Families -->
-        <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
-          <h3 class="text-xl font-bold text-blue-900 mb-3">Families</h3>
-          <p class="text-gray-600 leading-relaxed text-sm">
-            Through our "Project 500 Families" mission, we provide education, thoughtful strategy, and personalized guidance to help you build protection, flexibility, and lasting financial security.
-          </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+        
+        <!-- Families Card -->
+        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100 flex flex-col">
+          <img loading="lazy" src="/audience-family.png" alt="Family reviewing plans at a table" class="w-full h-48 object-cover" />
+          <div class="p-8 flex-grow">
+            <h3 class="text-xl font-bold text-blue-900 mb-3">Families</h3>
+            <p class="text-gray-600 leading-relaxed text-sm">
+              Through our "Project 500 Families" mission, we provide education, thoughtful strategy, and personalized guidance to help you build protection, flexibility, and lasting financial security.
+            </p>
+          </div>
         </div>
-        <!-- Individuals -->
-        <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
-          <h3 class="text-xl font-bold text-blue-900 mb-3">Individuals</h3>
-          <p class="text-gray-600 leading-relaxed text-sm">
-            We believe you deserve to understand your financial future. We empower you with financial education first, so you understand exactly how money works.
-          </p>
+
+        <!-- Individuals Card -->
+        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100 flex flex-col">
+          <img loading="lazy" src="/audience-individual.png" alt="Individual reading documents with coffee" class="w-full h-48 object-cover" />
+          <div class="p-8 flex-grow">
+            <h3 class="text-xl font-bold text-blue-900 mb-3">Individuals</h3>
+            <p class="text-gray-600 leading-relaxed text-sm">
+              We believe you deserve to understand your financial future. We empower you with financial education first, so you understand exactly how money works.
+            </p>
+          </div>
         </div>
-        <!-- Professionals -->
-        <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
-          <h3 class="text-xl font-bold text-blue-900 mb-3">Professionals</h3>
-          <p class="text-gray-600 leading-relaxed text-sm">
-            We design customized strategies that adapt to life's changes, ensuring you have income protection, tax-advantaged strategies, and retirement income flexibility.
-          </p>
+
+        <!-- Professionals Card -->
+        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100 flex flex-col">
+          <img loading="lazy" src="/audience-professional.png" alt="Professional in modern office" class="w-full h-48 object-cover" />
+          <div class="p-8 flex-grow">
+            <h3 class="text-xl font-bold text-blue-900 mb-3">Professionals</h3>
+            <p class="text-gray-600 leading-relaxed text-sm">
+              We design customized strategies that adapt to life's changes, ensuring you have income protection, tax-advantaged strategies, and retirement income flexibility.
+            </p>
+          </div>
         </div>
-        <!-- Business Owners -->
-        <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
-          <h3 class="text-xl font-bold text-blue-900 mb-3">Business Owners</h3>
-          <p class="text-gray-600 leading-relaxed text-sm">
-            We simplify complex protection strategies to guard your assets and help you build long-term strategies designed to outpace inflation and create a lasting family legacy.
-          </p>
+
+        <!-- Business Owners Card -->
+        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100 flex flex-col">
+          <img loading="lazy" src="/audience-business.png" alt="Confident business owner" class="w-full h-48 object-cover" />
+          <div class="p-8 flex-grow">
+            <h3 class="text-xl font-bold text-blue-900 mb-3">Business Owners</h3>
+            <p class="text-gray-600 leading-relaxed text-sm">
+              We simplify complex protection strategies to guard your assets and help you build long-term strategies designed to outpace inflation and create a lasting family legacy.
+            </p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- The Value Proposition CTA -->
+  <!-- CTA Section -->
   <section class="py-20 bg-blue-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl font-extrabold text-blue-900 mb-6">Beyond Saving. Toward Strategic Protection.</h2>

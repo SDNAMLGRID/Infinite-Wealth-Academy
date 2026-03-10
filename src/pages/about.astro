@@ -4,7 +4,7 @@ import GlobalLayout from '../layouts/GlobalLayout.astro';
 import TeamGrid from '../components/TeamGrid.astro';
 ---
 
-<GlobalLayout>
+<GlobalLayout title="About Us | Our Mission | Infinite Wealth Academy" description="Our mission: protecting 500 families by 2027. Education first, strategic protection, and sustainable long-term strategies. Partner with Infinite Wealth Academy.">
   <!-- Hero Section -->
   <section class="bg-blue-900 text-white py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -49,39 +49,54 @@ import TeamGrid from '../components/TeamGrid.astro';
     </div>
   </section>
 
-  <!-- Case Study Section -->
-  <section class="py-20 bg-gray-50 border-t border-gray-100">
+  <!-- Case Study Section (Updated with Split Layout & Image) -->
+  <section class="py-20 bg-gray-50 border-t border-gray-100 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-extrabold text-gray-900">Real Impact</h2>
-        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-          How One Family Gained More Control Over Their Financial Future.
-        </p>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        <!-- Case Study Image -->
+        <!-- Save as 'case-study-advisor' in public folder -->
+        <div class="relative rounded-2xl overflow-hidden shadow-xl hidden lg:block">
+          <img loading="lazy" src="/case-study-advisor.png" alt="Advisor consulting with a couple over a laptop" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Case Study Steps -->
+        <div>
+          <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Real Impact</h2>
+          <p class="text-lg text-gray-600 mb-10">
+            How One Family Gained More Control Over Their Financial Future.
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+              <div class="absolute -left-4 top-8 bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">1</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Their Concern</h3>
+              <p class="text-gray-600 leading-relaxed text-sm">
+                They felt uncertainty about market volatility and were unsure if their current savings plan provided enough protection against unforeseen life events or the retirement income gap.
+              </p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+              <div class="absolute -left-4 top-8 bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">2</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">What They Discovered</h3>
+              <p class="text-gray-600 leading-relaxed text-sm">
+                Through our customized Financial Needs Analysis, they realized traditional advice had overlooked living benefits, income protection, and tax-advantaged strategies.
+              </p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+              <div class="absolute -left-4 top-8 bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">3</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">The Result</h3>
+              <p class="text-gray-600 leading-relaxed text-sm">
+                By repositioning their assets, they achieved immediate financial clarity, improved flexibility for retirement income, and established generational confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
-          <div class="absolute -top-4 left-8 bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4 mt-2">Their Concern</h3>
-          <p class="text-gray-600 leading-relaxed text-sm">
-            They felt uncertainty about market volatility and were unsure if their current savings plan provided enough protection against unforeseen life events or the retirement income gap.
-          </p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
-          <div class="absolute -top-4 left-8 bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4 mt-2">What They Discovered</h3>
-          <p class="text-gray-600 leading-relaxed text-sm">
-            Through our customized Financial Needs Analysis, they realized traditional advice had overlooked living benefits, income protection, and tax-advantaged strategies.
-          </p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
-          <div class="absolute -top-4 left-8 bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4 mt-2">The Result</h3>
-          <p class="text-gray-600 leading-relaxed text-sm">
-            By repositioning their assets, they achieved immediate financial clarity, improved flexibility for retirement income, and established generational confidence.
-          </p>
-        </div>
-      </div>
     </div>
   </section>
 

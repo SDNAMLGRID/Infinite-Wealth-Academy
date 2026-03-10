@@ -1,13 +1,26 @@
 ---
 import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = 'Infinite Wealth Academy', description = 'Helping families protect, grow, and control their financial future. Financial clarity, strategic protection, and generational confidence. Project 500 Families by 2027.' } = Astro.props;
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Infinite Wealth Academy</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
   </head>
   <body class="font-sans antialiased text-gray-900 bg-white flex flex-col min-h-screen">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-blue-900 focus:text-white focus:rounded-md">Skip to main content</a>
 
     <!-- Sticky Header -->
     <header class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md shadow-sm">
@@ -15,9 +28,10 @@ import '../styles/global.css';
         <div class="flex justify-between items-center h-16">
           
           <!-- Logo -->
-          <div class="flex-shrink-0 flex items-center cursor-pointer">
-            <span class="font-extrabold text-xl text-blue-900 tracking-tight">Infinite Wealth Academy</span>
-          </div>
+          <a href="/" class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+            <img src="/logo.svg" alt="Infinite Wealth Academy" class="h-10 w-auto" />
+            <span class="font-extrabold text-xl text-blue-900 tracking-tight hidden sm:inline">Infinite Wealth Academy</span>
+          </a>
 
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex space-x-8">
@@ -26,19 +40,52 @@ import '../styles/global.css';
             <a href="/who-we-help" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Who We Help</a>
           </nav>
 
-          <!-- Call to Action Button (Calendly) -->
+          <!-- Call to Action Button (Calendly) - Desktop -->
           <div class="hidden md:flex items-center">
             <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-900 hover:bg-blue-800 transition-colors shadow-sm">
               Get a Free Consultation
             </a>
           </div>
 
+          <!-- Mobile menu button -->
+          <div class="flex md:hidden items-center">
+            <button type="button" id="mobile-menu-button" class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 aria-expanded='false' aria-controls="mobile-menu" aria-label="Open menu">
+              <svg class="w-6 h-6 menu-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+              <svg class="w-6 h-6 menu-close hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu panel -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 py-4" aria-label="Mobile navigation">
+          <nav class="flex flex-col gap-2">
+            <a href="/" class="px-2 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium">Home</a>
+            <a href="/about" class="px-2 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium">About Us / Mission</a>
+            <a href="/who-we-help" class="px-2 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium">Who We Help</a>
+            <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center justify-center px-5 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-900 hover:bg-blue-800">Get a Free Consultation</a>
+          </nav>
         </div>
       </div>
     </header>
+    <script>
+      (function() {
+        var btn = document.getElementById('mobile-menu-button');
+        var menu = document.getElementById('mobile-menu');
+        var openIcon = document.querySelector('.menu-open');
+        var closeIcon = document.querySelector('.menu-close');
+        if (!btn || !menu) return;
+        function setOpen(open) {
+          menu.classList.toggle('hidden', open);
+          btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+          if (openIcon && closeIcon) { openIcon.classList.toggle('hidden', !open); closeIcon.classList.toggle('hidden', open); }
+        }
+        btn.addEventListener('click', function() { setOpen(!menu.classList.contains('hidden')); });
+        menu.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', function() { setOpen(true); }); });
+      })();
+    </script>
 
     <!-- Dynamic Page Content -->
-    <main class="flex-grow">
+    <main id="main-content" class="flex-grow">
       <slot />
     </main>
 
@@ -48,7 +95,8 @@ import '../styles/global.css';
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div class="col-span-1 md:col-span-2">
-            <span class="font-extrabold text-xl text-white tracking-tight">Infinite Wealth Academy</span>
+            <img src="/logo.svg" alt="Infinite Wealth Academy" class="h-10 w-auto brightness-0 invert mb-4" />
+            <span class="font-extrabold text-xl text-white tracking-tight block">Infinite Wealth Academy</span>
             <p class="mt-4 text-gray-400 text-sm leading-relaxed max-w-lg">
               Helping Families Protect, Grow, and Control Their Financial Future. Financial Clarity. Strategic Protection. Generational Confidence.
             </p>
