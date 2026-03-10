@@ -22,41 +22,41 @@ const { title = 'Infinite Wealth Academy', description = 'Helping families prote
   <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-amber-500 focus:text-slate-900 focus:rounded-md">Skip to main content</a>
 
-    <!-- Sticky Header (Dark slate – Amadeus-style) -->
-    <header class="sticky top-0 z-50 w-full bg-slate-900 border-b border-slate-800 shadow-sm">
+    <!-- Sticky Header (Deep navy #1A2C46 – blends with hero) -->
+    <header class="sticky top-0 z-50 w-full border-b border-white/10 shadow-sm" style="background-color: #1A2C46;">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
           <a href="/" class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
             <img src="/logo-gold.svg.png" alt="Infinite Wealth Academy" class="h-10 w-auto" onerror="this.onerror=null; this.src='/logo.svg'; this.classList.add('brightness-0','invert');" />
-            <span class="font-extrabold text-xl text-white tracking-tight">Infinite Wealth Academy</span>
+            <span class="font-extrabold text-xl tracking-tight" style="color: #FFFFFF;">Infinite Wealth Academy</span>
           </a>
 
           <nav class="hidden md:flex space-x-8">
-            <a href="/" class="text-slate-300 hover:text-amber-400 font-medium transition-colors">Home</a>
-            <a href="/about" class="text-slate-300 hover:text-amber-400 font-medium transition-colors">About Us / Mission</a>
-            <a href="/who-we-help" class="text-slate-300 hover:text-amber-400 font-medium transition-colors">Who We Help</a>
+            <a href="/" class="font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">Home</a>
+            <a href="/about" class="font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">About Us / Mission</a>
+            <a href="/who-we-help" class="font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">Who We Help</a>
           </nav>
 
           <div class="hidden md:flex items-center">
-            <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-md text-white bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 transition-all shadow-md">
+            <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-md transition-all shadow-md hover:brightness-110" style="background-color: #CCA03F; color: #FFFFFF;">
               Get a Free Consultation
             </a>
           </div>
 
           <div class="flex md:hidden items-center">
-            <button type="button" id="mobile-menu-button" class="p-2 rounded-md text-slate-300 hover:text-amber-400 hover:bg-slate-800" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <button type="button" id="mobile-menu-button" class="p-2 rounded-md hover:opacity-80" style="color: #FFFFFF;" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
               <svg class="w-6 h-6 menu-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
               <svg class="w-6 h-6 menu-close hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
           </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 py-4" aria-label="Mobile navigation">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 py-4" aria-label="Mobile navigation">
           <nav class="flex flex-col gap-2">
-            <a href="/" class="px-2 py-2 text-slate-300 hover:text-amber-400 hover:bg-slate-800 rounded-md font-medium">Home</a>
-            <a href="/about" class="px-2 py-2 text-slate-300 hover:text-amber-400 hover:bg-slate-800 rounded-md font-medium">About Us / Mission</a>
-            <a href="/who-we-help" class="px-2 py-2 text-slate-300 hover:text-amber-400 hover:bg-slate-800 rounded-md font-medium">Who We Help</a>
-            <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center justify-center px-5 py-3 text-sm font-bold rounded-md text-white bg-gradient-to-r from-yellow-500 to-amber-600">Get a Free Consultation</a>
+            <a href="/" class="px-2 py-2 rounded-md font-medium hover:bg-white/10" style="color: #FFFFFF;">Home</a>
+            <a href="/about" class="px-2 py-2 rounded-md font-medium hover:bg-white/10" style="color: #FFFFFF;">About Us / Mission</a>
+            <a href="/who-we-help" class="px-2 py-2 rounded-md font-medium hover:bg-white/10" style="color: #FFFFFF;">Who We Help</a>
+            <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center justify-center px-5 py-3 text-sm font-bold rounded-md text-white hover:brightness-110" style="background-color: #CCA03F;">Get a Free Consultation</a>
           </nav>
         </div>
       </div>
@@ -82,7 +82,7 @@ const { title = 'Infinite Wealth Academy', description = 'Helping families prote
       <slot />
     </main>
 
-    <footer class="bg-slate-900 pt-16 pb-8 border-t border-slate-800">
+    <footer class="pt-16 pb-8 border-t border-white/10" style="background-color: #1A2C46;">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div class="col-span-1 md:col-span-2">
@@ -92,7 +92,7 @@ const { title = 'Infinite Wealth Academy', description = 'Helping families prote
             </p>
           </div>
           <div class="col-span-1">
-            <h4 class="text-amber-500 font-semibold mb-4">Quick Links</h4>
+            <h4 class="font-semibold mb-4" style="color: #CCA03F;">Quick Links</h4>
             <ul class="space-y-2 text-sm text-slate-400">
               <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
               <li><a href="/about" class="hover:text-white transition-colors">About Us</a></li>

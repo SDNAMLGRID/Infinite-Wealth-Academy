@@ -5,28 +5,51 @@ import TeamGrid from '../components/TeamGrid.astro';
 ---
 
 <GlobalLayout title="Infinite Wealth Academy | Protect, Grow & Control Your Financial Future" description="Secure your family's financial future with generational confidence. Strategic protection and tailored financial plans. Free consultation.">
-  <!-- Hero (Deep Slate & Gold) -->
-  <section class="bg-slate-900 text-white py-20 lg:py-24 overflow-hidden relative border-b border-amber-500/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div class="text-center lg:text-left z-10">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+  <!-- Hero: full-bleed blended split – family image as background, navy left with gradient blend (~75vh) -->
+  <section class="relative min-h-[78vh] overflow-hidden flex flex-col justify-center" aria-label="Hero">
+    <!-- Full-width background image (right-aligned so family is prominent) -->
+    <div
+      class="absolute inset-0 z-0 bg-cover bg-no-repeat"
+      style="background-image: url('/hero-family.webp.png'); background-position: right center;"
+      role="img"
+      aria-hidden="true"
+    />
+    <!-- Gradient overlay: solid navy left, blending into image (family “walking into” the blue) -->
+    <div
+      class="absolute inset-0 z-[1]"
+      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 45%, rgba(26,44,70,0.97) 52%, rgba(26,44,70,0.85) 62%, rgba(26,44,70,0.5) 74%, transparent 88%);"
+      aria-hidden="true"
+    />
+    <!-- On small screens: light tint over image so text stays readable -->
+    <div
+      class="absolute inset-0 z-[1] bg-[#1A2C46]/50 md:bg-transparent"
+      aria-hidden="true"
+    />
+    <!-- Content: left-aligned over solid navy, generous padding for high-end feel -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-xl text-center lg:text-left">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight" style="color: #FFFFFF;">
           Secure Your Family's Financial Future with Generational Confidence
         </h1>
-        <p class="text-xl text-slate-300 mb-10 leading-relaxed">
+        <p class="text-xl mb-10 leading-relaxed" style="color: #E0E4EB;">
           Unlock a clear path to lasting wealth. We provide strategic protection and tailored financial plans so you can build and preserve legacy for generations.
         </p>
-        <div class="flex justify-center lg:justify-start gap-4">
-          <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white font-bold rounded-lg shadow-[0_4px_14px_0_rgba(245,158,11,0.39)] hover:shadow-[0_6px_20px_rgba(245,158,11,0.23)] hover:scale-105 transition-all duration-300 text-lg">
+        <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+          <a
+            href="https://calendly.com/500families-infinitewealthacademy/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-8 py-4 font-bold rounded-lg text-lg transition-all duration-300 hover:brightness-110 hover:scale-[1.02] shadow-lg"
+            style="background-color: #CCA03F; color: #FFFFFF;"
+          >
             Start Your Legacy: Schedule a Free Consultation
           </a>
         </div>
       </div>
-      <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-700 hidden lg:block h-[500px]">
-        <img src="/hero-family.webp.png" alt="Multi-generational family walking together" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
-      </div>
     </div>
   </section>
+  <!-- Decorative bar under hero (gold accent, soft fade) -->
+  <div class="h-1.5 w-full" style="background: linear-gradient(to right, #CCA03F 0%, rgba(204,160,63,0.6) 40%, transparent 100%);" aria-hidden="true"></div>
 
   <!-- Problem & Solution -->
   <section class="py-20 bg-slate-50">
