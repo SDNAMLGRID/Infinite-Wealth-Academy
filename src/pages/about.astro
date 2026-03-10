@@ -1,105 +1,88 @@
 ---
-// src/pages/about.astro
 import GlobalLayout from '../layouts/GlobalLayout.astro';
 import TeamGrid from '../components/TeamGrid.astro';
 ---
 
 <GlobalLayout title="About Us | Our Mission | Infinite Wealth Academy" description="Our mission: protecting 500 families by 2027. Education first, strategic protection, and sustainable long-term strategies. Partner with Infinite Wealth Academy.">
-  <!-- Hero Section -->
-  <section class="bg-blue-900 text-white py-20 lg:py-28">
+  <section class="bg-slate-900 text-white py-20 lg:py-28 border-b border-amber-500/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
         Protecting Families. Strengthening Futures.
       </h1>
-      <p class="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+      <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
         Infinite Wealth Academy exists to help families gain financial clarity, strengthen protection, and build long-term confidence through education and strategic planning.
       </p>
     </div>
   </section>
 
-  <!-- The Mission -->
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
         <div class="mb-12 lg:mb-0">
-          <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Our Mission: Protecting 500 Families by 2027</h2>
-          <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Our Mission: Protecting 500 Families by 2027</h2>
+          <p class="text-lg text-slate-600 leading-relaxed mb-6">
             Where Financial Clarity Meets Family Security. Infinite Wealth Academy helps families build strong financial foundations through education, protection planning, and sustainable long-term strategies.
           </p>
-          <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-900 hover:bg-blue-800 transition-colors shadow-sm">
+          <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-md text-white bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 transition-all shadow-md">
             Partner With Us
           </a>
         </div>
-        
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
-            <h4 class="font-bold text-blue-900 text-lg mb-2">Education First</h4>
-            <p class="text-gray-600 text-sm">Empowering families to understand exactly how money works before making decisions.</p>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm border-l-4 border-amber-500">
+            <h4 class="font-bold text-slate-900 text-lg mb-2">Education First</h4>
+            <p class="text-slate-600 text-sm">Empowering families to understand exactly how money works before making decisions.</p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
-            <h4 class="font-bold text-blue-900 text-lg mb-2">Strategic Protection</h4>
-            <p class="text-gray-600 text-sm">Moving beyond saving to ensure your assets and income are properly shielded.</p>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm border-l-4 border-amber-500">
+            <h4 class="font-bold text-slate-900 text-lg mb-2">Strategic Protection</h4>
+            <p class="text-slate-600 text-sm">Moving beyond saving to ensure your assets and income are properly shielded.</p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm sm:col-span-2">
-            <h4 class="font-bold text-blue-900 text-lg mb-2">Sustainable Long-Term Strategies</h4>
-            <p class="text-gray-600 text-sm">Designing flexible retirement and generational wealth plans that adapt to life's inevitable changes.</p>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm sm:col-span-2 border-l-4 border-amber-500">
+            <h4 class="font-bold text-slate-900 text-lg mb-2">Sustainable Long-Term Strategies</h4>
+            <p class="text-slate-600 text-sm">Designing flexible retirement and generational wealth plans that adapt to life's inevitable changes.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Case Study Section (Updated with Split Layout & Image) -->
-  <section class="py-20 bg-gray-50 border-t border-gray-100 overflow-hidden">
+  <section class="py-20 bg-slate-50 border-t border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        
-        <!-- Case Study Image -->
-        <!-- Save as 'case-study-advisor' in public folder -->
         <div class="relative rounded-2xl overflow-hidden shadow-xl hidden lg:block">
           <img loading="lazy" src="/case-study-advisor.png" alt="Advisor consulting with a couple over a laptop" class="w-full h-full object-cover" />
         </div>
-
-        <!-- Case Study Steps -->
         <div>
-          <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Real Impact</h2>
-          <p class="text-lg text-gray-600 mb-10">
+          <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Real Impact</h2>
+          <p class="text-lg text-slate-600 mb-10">
             How One Family Gained More Control Over Their Financial Future.
           </p>
-
           <div class="space-y-8">
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
-              <div class="absolute -left-4 top-8 bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">1</div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Their Concern</h3>
-              <p class="text-gray-600 leading-relaxed text-sm">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
+              <div class="absolute -left-4 top-8 bg-slate-900 text-amber-400 w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">1</div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Their Concern</h3>
+              <p class="text-slate-600 leading-relaxed text-sm">
                 They felt uncertainty about market volatility and were unsure if their current savings plan provided enough protection against unforeseen life events or the retirement income gap.
               </p>
             </div>
-            
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
-              <div class="absolute -left-4 top-8 bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">2</div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">What They Discovered</h3>
-              <p class="text-gray-600 leading-relaxed text-sm">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
+              <div class="absolute -left-4 top-8 bg-slate-900 text-amber-400 w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">2</div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">What They Discovered</h3>
+              <p class="text-slate-600 leading-relaxed text-sm">
                 Through our customized Financial Needs Analysis, they realized traditional advice had overlooked living benefits, income protection, and tax-advantaged strategies.
               </p>
             </div>
-            
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
-              <div class="absolute -left-4 top-8 bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">3</div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">The Result</h3>
-              <p class="text-gray-600 leading-relaxed text-sm">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
+              <div class="absolute -left-4 top-8 bg-slate-900 text-amber-400 w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">3</div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">The Result</h3>
+              <p class="text-slate-600 leading-relaxed text-sm">
                 By repositioning their assets, they achieved immediate financial clarity, improved flexibility for retirement income, and established generational confidence.
               </p>
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
   </section>
 
   <TeamGrid />
-
 </GlobalLayout>
