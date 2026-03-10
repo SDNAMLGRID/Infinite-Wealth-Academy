@@ -1,0 +1,81 @@
+---
+// src/layouts/GlobalLayout.astro
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Wealth Academy</title>
+  </head>
+  <body class="font-sans antialiased text-gray-900 bg-white flex flex-col min-h-screen">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center cursor-pointer">
+            <span class="font-extrabold text-xl text-blue-900 tracking-tight">Infinite Wealth Academy</span>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-8">
+            <a href="/" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</a>
+            <a href="/about" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">About Us / Mission</a>
+            <a href="/who-we-help" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Who We Help</a>
+          </nav>
+
+          <!-- Call to Action Button (Calendly) -->
+          <div class="hidden md:flex items-center">
+            <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-900 hover:bg-blue-800 transition-colors shadow-sm">
+              Get a Free Consultation
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Dynamic Page Content -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 pt-16 pb-8 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div class="col-span-1 md:col-span-2">
+            <span class="font-extrabold text-xl text-white tracking-tight">Infinite Wealth Academy</span>
+            <p class="mt-4 text-gray-400 text-sm leading-relaxed max-w-lg">
+              Helping Families Protect, Grow, and Control Their Financial Future. Financial Clarity. Strategic Protection. Generational Confidence.
+            </p>
+          </div>
+
+          <div class="col-span-1">
+            <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+              <li><a href="/about" class="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/who-we-help" class="hover:text-white transition-colors">Who We Help</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="border-t border-gray-800 pt-8 mt-8">
+          <p class="text-xs text-gray-500 leading-relaxed text-justify mb-6">
+            <strong>Disclaimer:</strong> Infinite Wealth Academy provides financial education and protection planning guidance. We are not a registered investment advisor. Content on this site is for educational purposes only. Discuss any legal, tax, or financial matter with the appropriate professional. Neither the information presented nor any opinion expressed constitutes a solicitation for the purchase or sale of any specific product or financial service. The Financial Needs Analysis is based on the accuracy and completeness of the data provided by the client.
+          </p>
+          
+          <div class="text-center md:text-left text-sm text-gray-500">
+            &copy; 2026 Infinite Wealth Academy. All rights reserved.
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </body>
+</html>
