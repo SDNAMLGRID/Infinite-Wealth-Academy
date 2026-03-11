@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,5 +7,23 @@
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </head>
   <body>
+    <div id="cms-load-message" style="font-family: system-ui, sans-serif; max-width: 480px; margin: 2rem auto; padding: 1rem; text-align: center; color: #333;">
+      <p>Loading Content Manager…</p>
+      <p style="font-size: 0.875rem; color: #666;">If this stays blank: enable <strong>Identity</strong> and <strong>Git Gateway</strong> in Netlify (Project configuration → Identity). Then refresh.</p>
+    </div>
+    <script>
+      (function() {
+        var el = document.getElementById('cms-load-message');
+        if (!el) return;
+        setTimeout(function() {
+          var root = document.querySelector('#nc-root, [data-reactroot]');
+          if (!root || !root.innerHTML) {
+            el.innerHTML = '<p><strong>Content Manager could not load.</strong></p><p>1. In Netlify, go to <strong>Project configuration → Identity</strong> and click <strong>Enable Identity</strong>.</p><p>2. Open <strong>Identity → Services</strong> (or <strong>Identity → Git Gateway</strong>) and click <strong>Enable Git Gateway</strong>.</p><p>3. Refresh this page. You should see a login, then the editor.</p><p style="font-size:0.875rem;color:#666;">If it still fails, open the browser console (F12) and check for errors.</p>';
+          } else {
+            el.style.display = 'none';
+          }
+        }, 5000);
+      })();
+    </script>
   </body>
 </html>

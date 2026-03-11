@@ -1,9 +1,16 @@
 backend:
   name: git-gateway
   branch: main
+  # Netlify Identity / Git Gateway (required for CMS to load)
+  # Enable in Netlify: Identity → Enable Identity, then Services → Enable Git Gateway
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
+
+# So the CMS knows the site URL (can help with OAuth redirects)
+site_url: https://tiny-fenglisu-8d7290.netlify.app
+display_url: https://tiny-fenglisu-8d7290.netlify.app
+locale: en
 
 collections:
   - name: "blog"
