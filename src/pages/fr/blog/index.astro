@@ -10,8 +10,21 @@ const sortedPosts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.
   title="Insights & Éducation | Infinite Wealth Academy"
   description="Comprendre comment l’argent fonctionne. Protection du revenu, stratégies fiscalement avantageuses et héritage : des idées concrètes."
 >
-  <section class="py-20 border-b border-white/10" style="background-color: #1A2C46;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <!-- Hero blog : logo intégré, entièrement visible (contain), dégradé navy -->
+  <section class="relative overflow-hidden py-20 lg:py-24 border-b border-amber-500/20 text-white" style="background-color: #1A2C46;">
+    <img
+      src="/infinite_wealth_logo_transparent.svg"
+      alt=""
+      class="absolute inset-0 z-0 w-full h-full object-contain object-center opacity-30 p-12 md:p-20"
+      loading="eager"
+      aria-hidden="true"
+    />
+    <div
+      class="absolute inset-0 z-[1] pointer-events-none"
+      style="background: linear-gradient(to right, #1A2C46 0%, rgba(26,44,70,0.75) 35%, rgba(26,44,70,0.5) 50%, rgba(26,44,70,0.75) 65%, #1A2C46 100%);"
+      aria-hidden="true"
+    />
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6" style="color: #FFFFFF;">
         Insights & <span style="color: #CCA03F;">Éducation</span>
       </h1>
