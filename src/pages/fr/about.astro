@@ -8,16 +8,16 @@ import TeamGrid from '../../components/TeamGrid.astro';
   description="Notre mission : protéger 500 familles d’ici 2027. L’éducation d’abord, une protection stratégique et des stratégies durables. Partenariat avec Infinite Wealth Academy."
 >
   <section class="relative overflow-hidden border-b border-amber-500/20 bg-slate-900 text-white py-20 lg:py-28">
-    <!-- Image de fond : focus sur la figure centrale -->
+    <!-- Image de fond : figure centrale au centre -->
     <div
-      class="absolute inset-0 z-0 bg-cover bg-no-repeat"
-      style="background-image: url('/our-mission.png'); background-position: center right;"
+      class="absolute inset-0 z-0 bg-cover bg-no-repeat bg-center"
+      style="background-image: url('/our-mission.png'); background-position: center center;"
       aria-hidden="true"
     />
-    <!-- Dégradé façon hero principal -->
+    <!-- Dégradé : gauche plein, droite visible -->
     <div
       class="absolute inset-0 z-[1]"
-      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 40%, rgba(26,44,70,0.95) 52%, rgba(26,44,70,0.7) 68%, rgba(26,44,70,0.3) 82%, transparent 96%);"
+      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 32%, rgba(26,44,70,0.92) 48%, rgba(26,44,70,0.55) 65%, rgba(26,44,70,0.2) 82%, transparent 100%);"
       aria-hidden="true"
     />
     <!-- Voile supplémentaire sur mobile -->

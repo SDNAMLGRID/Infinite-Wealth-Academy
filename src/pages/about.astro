@@ -5,16 +5,16 @@ import TeamGrid from '../components/TeamGrid.astro';
 
 <GlobalLayout title="About Us | Our Mission | Infinite Wealth Academy" description="Our mission: protecting 500 families by 2027. Education first, strategic protection, and sustainable long-term strategies. Partner with Infinite Wealth Academy.">
   <section class="relative overflow-hidden border-b border-amber-500/20 bg-slate-900 text-white py-20 lg:py-28">
-    <!-- Background image: focus center figure -->
+    <!-- Background image: center figure in focus -->
     <div
-      class="absolute inset-0 z-0 bg-cover bg-no-repeat"
-      style="background-image: url('/our-mission.png'); background-position: center right;"
+      class="absolute inset-0 z-0 bg-cover bg-no-repeat bg-center"
+      style="background-image: url('/our-mission.png'); background-position: center center;"
       aria-hidden="true"
     />
-    <!-- Gradient overlay similar to home hero -->
+    <!-- Gradient: solid left, fade so center/right image shows -->
     <div
       class="absolute inset-0 z-[1]"
-      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 40%, rgba(26,44,70,0.95) 52%, rgba(26,44,70,0.7) 68%, rgba(26,44,70,0.3) 82%, transparent 96%);"
+      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 32%, rgba(26,44,70,0.92) 48%, rgba(26,44,70,0.55) 65%, rgba(26,44,70,0.2) 82%, transparent 100%);"
       aria-hidden="true"
     />
     <!-- Extra tint on small screens -->
