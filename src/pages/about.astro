@@ -4,8 +4,23 @@ import TeamGrid from '../components/TeamGrid.astro';
 ---
 
 <GlobalLayout title="About Us | Our Mission | Infinite Wealth Academy" description="Our mission: protecting 500 families by 2027. Education first, strategic protection, and sustainable long-term strategies. Partner with Infinite Wealth Academy.">
-  <section class="bg-slate-900 text-white py-20 lg:py-28 border-b border-amber-500/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <section class="relative overflow-hidden border-b border-amber-500/20 bg-slate-900 text-white py-20 lg:py-28">
+    <!-- Background image: focus center figure -->
+    <div
+      class="absolute inset-0 z-0 bg-cover bg-no-repeat"
+      style="background-image: url('/our-mission.png'); background-position: center right;"
+      aria-hidden="true"
+    />
+    <!-- Gradient overlay similar to home hero -->
+    <div
+      class="absolute inset-0 z-[1]"
+      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 40%, rgba(26,44,70,0.95) 52%, rgba(26,44,70,0.7) 68%, rgba(26,44,70,0.3) 82%, transparent 96%);"
+      aria-hidden="true"
+    />
+    <!-- Extra tint on small screens -->
+    <div class="absolute inset-0 z-[1] bg-[#1A2C46]/60 md:bg-transparent" aria-hidden="true" />
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
         Protecting Families. Strengthening Futures.
       </h1>
