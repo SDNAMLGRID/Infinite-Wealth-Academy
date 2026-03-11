@@ -1,0 +1,145 @@
+---
+import GlobalLayout from '../../layouts/GlobalLayout.astro';
+import OfferingsGrid from '../../components/OfferingsGrid.astro';
+import TeamGrid from '../../components/TeamGrid.astro';
+---
+
+<GlobalLayout
+  title="Infinite Wealth Academy | Protégez, développez et contrôlez votre avenir financier"
+  description="Sécurisez l’avenir financier de votre famille avec une confiance générationnelle. Protection stratégique et plans personnalisés. Consultation gratuite."
+>
+  <!-- Hero -->
+  <section class="relative min-h-[78vh] overflow-hidden flex flex-col justify-center" aria-label="Hero">
+    <div
+      class="absolute inset-0 z-0 bg-cover bg-no-repeat"
+      style="background-image: url('/hero-family.webp.png'); background-position: right center;"
+      role="img"
+      aria-hidden="true"
+    />
+    <div
+      class="absolute inset-0 z-[1]"
+      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 45%, rgba(26,44,70,0.97) 52%, rgba(26,44,70,0.85) 62%, rgba(26,44,70,0.5) 74%, transparent 88%);"
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0 z-[1] bg-[#1A2C46]/50 md:bg-transparent" aria-hidden="true" />
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-xl text-center lg:text-left">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight" style="color: #FFFFFF;">
+          Sécurisez l’avenir financier de votre famille avec une confiance générationnelle
+        </h1>
+        <p class="text-xl mb-10 leading-relaxed" style="color: #E0E4EB;">
+          Obtenez une trajectoire claire vers une richesse durable. Nous combinons protection stratégique et planification personnalisée pour bâtir et préserver votre héritage.
+        </p>
+        <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+          <a
+            href="https://calendly.com/500families-infinitewealthacademy/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-8 py-4 font-bold rounded-lg text-lg transition-all duration-300 hover:brightness-110 hover:scale-[1.02] shadow-lg"
+            style="background-color: #CCA03F; color: #FFFFFF;"
+          >
+            Démarrez votre héritage : consultation gratuite
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="h-1.5 w-full" style="background: linear-gradient(to right, #CCA03F 0%, rgba(204,160,63,0.6) 40%, transparent 100%);" aria-hidden="true"></div>
+
+  <!-- CTA: Tools -->
+  <section class="py-12" style="background-color: #1A2C46;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight" style="color: #FFFFFF;">
+            De la clarté en moins de 60 secondes
+          </h2>
+          <p class="mt-2 text-base md:text-lg max-w-2xl" style="color: #E0E4EB;">
+            Essayez nos outils interactifs pour identifier votre écart de revenu à la retraite et vos angles morts financiers — et savoir quoi faire ensuite.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+          <a
+            href="/fr/resources"
+            class="inline-flex items-center justify-center px-7 py-4 font-bold rounded-lg text-base transition-all duration-300 hover:brightness-110 hover:scale-[1.02] shadow-lg w-full md:w-auto"
+            style="background-color: #CCA03F; color: #FFFFFF;"
+          >
+            Essayer les outils interactifs
+          </a>
+          <a
+            href="https://calendly.com/500families-infinitewealthacademy/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-7 py-4 font-bold rounded-lg text-base transition-all duration-300 hover:bg-white/10 border border-white/20 w-full md:w-auto"
+            style="color: #FFFFFF;"
+          >
+            Réserver une séance
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem & Solution -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-extrabold text-slate-900">Pourquoi Infinite Wealth Academy existe</h2>
+        <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+          La confusion financière coûte cher aux familles. Les conseils traditionnels négligent souvent la protection et la flexibilité. Le Projet 500 Familles est là pour changer cela.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+          <h3 class="text-2xl font-bold text-slate-900 mb-6 border-b border-amber-200 pb-4">Les risques que beaucoup ne voient pas venir</h3>
+          <ul class="space-y-4 text-slate-600 font-medium">
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Que deviennent vos comptes retraite après un changement d’emploi</li>
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Pourquoi tant de familles sont sous-assurées</li>
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> L’écart de revenu à la retraite</li>
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> La différence entre économiser et positionner</li>
+          </ul>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+          <h3 class="text-2xl font-bold text-slate-900 mb-6 border-b border-amber-200 pb-4">La protection financière doit être simple</h3>
+          <ul class="space-y-4 text-slate-600 font-medium">
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Protection du revenu</li>
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Stratégies fiscalement avantageuses</li>
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Prestations du vivant</li>
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Flexibilité du revenu à la retraite</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <OfferingsGrid />
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-extrabold mb-16"><span class="text-amber-500">Ce que disent mes clients</span></h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-slate-800 p-8 rounded-2xl flex flex-col items-center border border-slate-700">
+          <img loading="lazy" src="/michael-headshot.webp" alt="Michael Lynch" class="w-20 h-20 rounded-full object-cover mb-6 border-2 border-amber-500 shadow-md" />
+          <p class="italic text-slate-300 mb-6 flex-grow">« Avant de travailler avec Koumba, nous pensions que l’épargne suffisait. Elle nous a aidés à comprendre la protection et la flexibilité, enfin simplement. Nous sommes plus confiants pour l’avenir. »</p>
+          <p class="font-bold text-amber-500">— Michael Lynch</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-2xl flex flex-col items-center border border-slate-700">
+          <img loading="lazy" src="/camillus-headshot.png" alt="Camillus Alemoh" class="w-20 h-20 rounded-full object-cover mb-6 border-2 border-amber-500 shadow-md" />
+          <p class="italic text-slate-300 mb-6 flex-grow">« Koumba a un talent pour simplifier des sujets complexes. Au lieu d’être submergés, nous nous sentons informés et en contrôle. »</p>
+          <p class="font-bold text-amber-500">— Camillus Alemoh</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-2xl flex flex-col items-center border border-slate-700">
+          <img loading="lazy" src="/victoria-headshot.webp" alt="Victoria Amusa" class="w-20 h-20 rounded-full object-cover mb-6 border-2 border-amber-500 shadow-md" />
+          <p class="italic text-slate-300 mb-6 flex-grow">« La clarté obtenue pendant notre séance a changé notre façon de penser la retraite. Nous comprenons enfin nos options. »</p>
+          <p class="font-bold text-amber-500">— Victoria Amusa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TeamGrid />
+</GlobalLayout>

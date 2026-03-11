@@ -1,0 +1,51 @@
+---
+import GlobalLayout from '../../../layouts/GlobalLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<GlobalLayout
+  title="Insights & Éducation | Infinite Wealth Academy"
+  description="Comprendre comment l’argent fonctionne. Protection du revenu, stratégies fiscalement avantageuses et héritage : des idées concrètes."
+>
+  <section class="py-20 border-b border-white/10" style="background-color: #1A2C46;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6" style="color: #FFFFFF;">
+        Insights & <span style="color: #CCA03F;">Éducation</span>
+      </h1>
+      <p class="text-xl max-w-2xl mx-auto leading-relaxed" style="color: #E0E4EB;">
+        Des stratégies claires pour protéger votre revenu, optimiser la fiscalité et bâtir une confiance générationnelle.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 min-h-screen bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {sortedPosts.map((post) => (
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col">
+            {post.data.image && (
+              <img src={post.data.image} alt={post.data.title} class="w-full h-48 object-cover border-b" style="border-color: rgba(204,160,63,0.2);" />
+            )}
+            <div class="p-8 flex-grow flex flex-col">
+              <p class="text-sm font-bold mb-2 uppercase tracking-wide" style="color: #CCA03F;">
+                {post.data.date.toLocaleDateString('fr-FR', { month: 'long', day: 'numeric', year: 'numeric' })}
+              </p>
+              <h2 class="text-2xl font-bold text-slate-900 mb-3 leading-tight">
+                <a href={`/fr/blog/${post.id}`} class="hover:opacity-80 transition-opacity" style="color: inherit;">{post.data.title}</a>
+              </h2>
+              <p class="text-slate-600 mb-6 flex-grow leading-relaxed text-sm">
+                {post.data.description}
+              </p>
+              <a href={`/fr/blog/${post.id}`} class="inline-flex items-center font-bold transition-opacity hover:opacity-80 text-slate-900">
+                Lire l’article <span class="ml-2" style="color: #CCA03F;">→</span>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</GlobalLayout>
