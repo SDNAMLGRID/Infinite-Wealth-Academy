@@ -6,9 +6,24 @@ import GlobalLayout from '../../layouts/GlobalLayout.astro';
   title="Qui nous aidons | Familles, individus, professionnels et entrepreneurs"
   description="Nous aidons les familles, individus, professionnels et entrepreneurs à passer de l’incertitude à la clarté. Éducation financière et stratégies de protection personnalisées."
 >
-  <section class="bg-slate-900 text-white py-20 lg:py-24 overflow-hidden border-b border-amber-500/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div class="text-center lg:text-left z-10">
+  <section class="relative overflow-hidden border-b border-amber-500/20 bg-slate-900 text-white py-20 lg:py-24">
+    <!-- Image de fond alignée à droite -->
+    <div
+      class="absolute inset-0 z-0 bg-cover bg-no-repeat"
+      style="background-image: url('/clarity-horizon.png'); background-position: right center;"
+      aria-hidden="true"
+    />
+    <!-- Dégradé façon page d’accueil -->
+    <div
+      class="absolute inset-0 z-[1]"
+      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 45%, rgba(26,44,70,0.96) 55%, rgba(26,44,70,0.75) 68%, rgba(26,44,70,0.4) 80%, transparent 92%);"
+      aria-hidden="true"
+    />
+    <!-- Voile supplémentaire sur mobile -->
+    <div class="absolute inset-0 z-[1] bg-[#1A2C46]/60 md:bg-transparent" aria-hidden="true" />
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="text-center lg:text-left">
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
           Passer de l’incertitude à la <span class="text-amber-500">clarté</span> et à la <span class="text-amber-500">confiance</span>
         </h1>
@@ -16,9 +31,7 @@ import GlobalLayout from '../../layouts/GlobalLayout.astro';
           Nous aidons des familles de tous horizons à faire des choix financiers éclairés qui soutiennent les besoins d’aujourd’hui et les objectifs de demain.
         </p>
       </div>
-      <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-700 hidden lg:block h-80">
-        <img loading="lazy" src="/clarity-horizon.png" alt="Professionnel regardant vers un horizon lumineux" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
-      </div>
+      <div class="hidden lg:block" aria-hidden="true"></div>
     </div>
   </section>
 
