@@ -8,20 +8,20 @@ import TeamGrid from '../../components/TeamGrid.astro';
   description="Notre mission : protéger 500 familles d’ici 2027. L’éducation d’abord, une protection stratégique et des stratégies durables. Partenariat avec Infinite Wealth Academy."
 >
   <section class="relative overflow-hidden border-b border-amber-500/20 bg-slate-900 text-white py-20 lg:py-28">
-    <!-- Image de fond : figure centrale au centre -->
+    <!-- Image hero mission (pleine largeur, centrée) -->
     <div
-      class="absolute inset-0 z-0 bg-cover bg-no-repeat bg-center"
-      style="background-image: url('/our-mission.png'); background-position: center center;"
+      class="absolute inset-0 z-0 bg-no-repeat bg-center"
+      style="background-image: url('/our-mission.png'); background-size: cover; background-position: center center;"
       aria-hidden="true"
     />
-    <!-- Dégradé : gauche plein, droite visible -->
+    <!-- Dégradé : gauche navy, centre/droite plus clair pour laisser voir l'image -->
     <div
       class="absolute inset-0 z-[1]"
-      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 32%, rgba(26,44,70,0.92) 48%, rgba(26,44,70,0.55) 65%, rgba(26,44,70,0.2) 82%, transparent 100%);"
+      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 28%, rgba(26,44,70,0.88) 42%, rgba(26,44,70,0.5) 58%, rgba(26,44,70,0.15) 75%, transparent 95%);"
       aria-hidden="true"
     />
-    <!-- Voile supplémentaire sur mobile -->
-    <div class="absolute inset-0 z-[1] bg-[#1A2C46]/60 md:bg-transparent" aria-hidden="true" />
+    <!-- Légère teinte sur mobile uniquement -->
+    <div class="absolute inset-0 z-[1] bg-[#1A2C46]/50 md:bg-transparent" aria-hidden="true" />
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
