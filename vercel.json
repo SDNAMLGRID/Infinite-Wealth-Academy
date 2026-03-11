@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/about", "destination": "/mission", "permanent": true },
+    { "source": "/fr/about", "destination": "/fr/mission", "permanent": true }
+  ]
+}
