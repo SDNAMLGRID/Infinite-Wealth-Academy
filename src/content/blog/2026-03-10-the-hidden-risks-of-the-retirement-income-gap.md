@@ -38,4 +38,4 @@ Our approach focuses on four key solutions that provide long-term clarity:
 
 Every family deserves to understand their financial future [5]. By gaining financial clarity today, you can navigate these hidden risks and establish a lasting family legacy [4].
 
-Don't let the retirement income gap catch you off guard. [Schedule a free consultation](https://calendly.com/500families-infinitewealthacademy/30min) with us today, and let's map out your unique goals with a customized Financial Needs Analysis [4].
+Don't let the retirement income gap catch you off guard. [Schedule a free consultation](/book) with us today, and let's map out your unique goals with a customized Financial Needs Analysis [4].

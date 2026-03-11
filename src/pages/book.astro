@@ -1,0 +1,33 @@
+---
+import GlobalLayout from '../layouts/GlobalLayout.astro';
+---
+
+<GlobalLayout
+  title="Book a Consultation | Infinite Wealth Academy"
+  description="Schedule your complimentary Financial Needs Analysis (FNA) to uncover hidden financial risks and build generational confidence."
+>
+  <section class="py-20 border-b border-white/10" style="background-color: #1A2C46;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6" style="color: #FFFFFF;">
+        Book Your Free <span style="color: #CCA03F;">Strategy Session</span>
+      </h1>
+      <p class="text-xl max-w-2xl mx-auto leading-relaxed" style="color: #E0E4EB;">
+        Take the first step toward generational confidence. Schedule your complimentary Financial Needs Analysis (FNA) to discover and fix your hidden financial risks.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-slate-50 min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-xl border-t-4 border-amber-500 p-2 md:p-6">
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/500families-infinitewealthacademy/30min?hide_event_type_details=1&hide_gdpr_banner=1"
+          style="min-width:320px;height:700px;"
+        ></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      </div>
+    </div>
+  </section>
+</GlobalLayout>
+

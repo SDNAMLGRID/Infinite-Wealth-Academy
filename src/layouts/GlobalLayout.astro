@@ -58,7 +58,7 @@ const frenchPath = pathname.startsWith('/fr') ? pathname : `/fr${pathname === '/
               <span class="text-slate-600">|</span>
               <a href={frenchPath} class="text-sm font-bold transition-colors hover:opacity-90" style={`color: ${currentLocale === 'fr' ? '#CCA03F' : '#E0E4EB'};`}>FR</a>
             </div>
-            <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-md transition-all shadow-md hover:brightness-110" style="background-color: #CCA03F; color: #FFFFFF;">
+            <a href={`${localePrefix}/book`} class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-md transition-all shadow-md hover:brightness-110" style="background-color: #CCA03F; color: #FFFFFF;">
               {currentLocale === 'fr' ? 'Consultation gratuite' : 'Get a Free Consultation'}
             </a>
           </div>
@@ -85,7 +85,7 @@ const frenchPath = pathname.startsWith('/fr') ? pathname : `/fr${pathname === '/
               <a href={frenchPath} class="text-sm font-bold transition-colors hover:opacity-90" style={`color: ${currentLocale === 'fr' ? '#CCA03F' : '#E0E4EB'};`}>FR</a>
             </div>
 
-            <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center justify-center px-5 py-3 text-sm font-bold rounded-md text-white hover:brightness-110" style="background-color: #CCA03F;">{currentLocale === 'fr' ? 'Consultation gratuite' : 'Get a Free Consultation'}</a>
+            <a href={`${localePrefix}/book`} class="mt-2 inline-flex items-center justify-center px-5 py-3 text-sm font-bold rounded-md text-white hover:brightness-110" style="background-color: #CCA03F;">{currentLocale === 'fr' ? 'Consultation gratuite' : 'Get a Free Consultation'}</a>
           </nav>
         </div>
       </div>
