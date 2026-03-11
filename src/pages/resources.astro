@@ -1,0 +1,126 @@
+---
+import GlobalLayout from '../layouts/GlobalLayout.astro';
+---
+
+<GlobalLayout title="Interactive Resources & Calculators | Infinite Wealth Academy" description="Use our Retirement Income Gap Calculator to discover your potential shortfall. Gain clarity on your financial future with instant, client-side tools.">
+  <!-- Hero (locked theme: #1A2C46, #FFFFFF, #E0E4EB, #CCA03F) -->
+  <section class="py-20 border-b border-white/10" style="background-color: #1A2C46;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6" style="color: #FFFFFF;">
+        Interactive <span style="color: #CCA03F;">Resources</span>
+      </h1>
+      <p class="text-xl max-w-2xl mx-auto leading-relaxed" style="color: #E0E4EB;">
+        Gain immediate clarity on your financial future. Use our tools to discover your potential blind spots and see why saving alone might not be enough.
+      </p>
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <section class="py-20 bg-slate-50 min-h-screen">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row" style="border-top: 4px solid #CCA03F;">
+        <!-- Input Form -->
+        <div class="p-10 md:w-1/2 bg-white border-r border-slate-100">
+          <h2 class="text-2xl font-bold text-slate-900 mb-6">Retirement Income Gap Calculator</h2>
+          <p class="text-slate-600 text-sm mb-8">Enter your current numbers below to estimate what your income will look like in retirement—and discover if you have a hidden gap.</p>
+
+          <form id="calculator-form" class="space-y-5">
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-1">Current Age</label>
+              <input type="number" id="currentAge" value="35" min="18" max="100" class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-offset-0 focus:border-[#CCA03F] bg-slate-50 text-slate-900 focus:outline-none focus:ring-[#CCA03F]" />
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-1">Desired Retirement Age</label>
+              <input type="number" id="retireAge" value="65" min="18" max="100" class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-offset-0 focus:border-[#CCA03F] bg-slate-50 text-slate-900 focus:outline-none focus:ring-[#CCA03F]" />
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-1">Current Retirement Savings ($)</label>
+              <input type="number" id="currentSavings" value="50000" min="0" step="1000" class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-offset-0 focus:border-[#CCA03F] bg-slate-50 text-slate-900 focus:outline-none focus:ring-[#CCA03F]" />
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-1">Monthly Contribution ($)</label>
+              <input type="number" id="monthlyContribution" value="500" min="0" step="50" class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-offset-0 focus:border-[#CCA03F] bg-slate-50 text-slate-900 focus:outline-none focus:ring-[#CCA03F]" />
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-1">Desired Annual Income in Retirement ($)</label>
+              <input type="number" id="desiredIncome" value="80000" min="0" step="5000" class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-offset-0 focus:border-[#CCA03F] bg-slate-50 text-slate-900 focus:outline-none focus:ring-[#CCA03F]" />
+            </div>
+          </form>
+        </div>
+
+        <!-- Results Display (navy panel) -->
+        <div class="p-10 md:w-1/2 flex flex-col justify-center border-t md:border-t-0 md:border-l border-white/10" style="background-color: #1A2C46;">
+          <h3 class="text-xl font-bold mb-8 border-b border-white/10 pb-4" style="color: #CCA03F;">Your Projections</h3>
+
+          <div class="space-y-6 flex-grow">
+            <div>
+              <p class="text-slate-400 text-sm uppercase tracking-wide">Estimated Total Savings at Retirement</p>
+              <p class="text-3xl font-extrabold" style="color: #FFFFFF;" id="resultTotalSavings">$0</p>
+              <p class="text-xs text-slate-500 mt-1">*Assuming a conservative 6% annual growth rate</p>
+            </div>
+            <div>
+              <p class="text-slate-400 text-sm uppercase tracking-wide">Estimated Safe Annual Income</p>
+              <p class="text-3xl font-extrabold" style="color: #FFFFFF;" id="resultAnnualIncome">$0</p>
+              <p class="text-xs text-slate-500 mt-1">*Based on a standard 4% withdrawal rate</p>
+            </div>
+            <div class="bg-white/5 p-4 rounded-lg border-l-4 border-red-500 mt-4">
+              <p class="text-slate-300 text-sm font-bold">Your Retirement Income Gap:</p>
+              <p class="text-2xl font-bold text-red-400" id="resultGap">$0</p>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/10">
+            <p class="text-sm text-slate-300 mb-4">Don't let this gap cost you your generational confidence. Let's fix it through strategic positioning.</p>
+            <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="block w-full text-center px-6 py-3 text-sm font-bold rounded-md transition-all shadow-md hover:brightness-110 hover:scale-[1.02]" style="background-color: #CCA03F; color: #FFFFFF;">
+              Book a Strategy Session
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function calculateRetirement() {
+      const currentAge = parseInt(document.getElementById('currentAge').value, 10) || 0;
+      const retireAge = parseInt(document.getElementById('retireAge').value, 10) || 0;
+      const currentSavings = parseFloat(document.getElementById('currentSavings').value) || 0;
+      const monthlyContribution = parseFloat(document.getElementById('monthlyContribution').value) || 0;
+      const desiredIncome = parseFloat(document.getElementById('desiredIncome').value) || 0;
+
+      const yearsToGrow = Math.max(0, retireAge - currentAge);
+      const annualRate = 0.06;
+      const monthlyRate = annualRate / 12;
+      const totalMonths = yearsToGrow * 12;
+
+      const futureSavings = currentSavings * Math.pow(1 + annualRate, yearsToGrow);
+      let futureContributions = 0;
+      if (monthlyRate > 0) {
+        futureContributions = monthlyContribution * ((Math.pow(1 + monthlyRate, totalMonths) - 1) / monthlyRate);
+      }
+
+      const totalFutureValue = futureSavings + futureContributions;
+      const expectedAnnualIncome = totalFutureValue * 0.04;
+      const incomeGap = Math.max(0, desiredIncome - expectedAnnualIncome);
+
+      const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+      document.getElementById('resultTotalSavings').textContent = formatter.format(totalFutureValue);
+      document.getElementById('resultAnnualIncome').textContent = formatter.format(expectedAnnualIncome);
+
+      const gapEl = document.getElementById('resultGap');
+      if (incomeGap > 0) {
+        gapEl.textContent = formatter.format(incomeGap) + ' Shortfall';
+        gapEl.className = 'text-2xl font-bold text-red-400';
+      } else {
+        gapEl.textContent = 'Goal Met!';
+        gapEl.className = 'text-2xl font-bold text-green-400';
+      }
+    }
+
+    document.querySelectorAll('#calculator-form input').forEach(function (input) {
+      input.addEventListener('input', calculateRetirement);
+    });
+    calculateRetirement();
+  </script>
+</GlobalLayout>
