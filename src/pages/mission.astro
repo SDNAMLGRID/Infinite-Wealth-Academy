@@ -5,20 +5,23 @@ import TeamGrid from '../components/TeamGrid.astro';
 
 <GlobalLayout title="Our Mission | Infinite Wealth Academy" description="Our mission: protecting 500 families by 2027. Education first, strategic protection, and sustainable long-term strategies. Partner with Infinite Wealth Academy.">
   <section class="relative overflow-hidden border-b border-amber-500/20 bg-slate-900 text-white py-20 lg:py-28">
-    <!-- Mission hero background image (full-bleed, center) -->
-    <div
-      class="absolute inset-0 z-0 bg-no-repeat bg-center"
-      style="background-image: url('/our-mission.png'); background-size: cover; background-position: center center;"
+    <!-- Mission hero: image as DOM element so it always loads and displays -->
+    <img
+      src="/our-mission.png"
+      alt=""
+      class="absolute inset-0 z-0 w-full h-full object-cover object-center"
+      loading="eager"
+      fetchpriority="high"
       aria-hidden="true"
     />
-    <!-- Gradient overlay: left solid navy, center/right lighter so image shows -->
+    <!-- Gradient overlay: navy left, fade to transparent so image is visible center/right -->
     <div
-      class="absolute inset-0 z-[1]"
-      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 28%, rgba(26,44,70,0.88) 42%, rgba(26,44,70,0.5) 58%, rgba(26,44,70,0.15) 75%, transparent 95%);"
+      class="absolute inset-0 z-[1] pointer-events-none"
+      style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 22%, rgba(26,44,70,0.85) 38%, rgba(26,44,70,0.45) 55%, rgba(26,44,70,0.12) 72%, transparent 92%);"
       aria-hidden="true"
     />
     <!-- Light tint on small screens only -->
-    <div class="absolute inset-0 z-[1] bg-[#1A2C46]/50 md:bg-transparent" aria-hidden="true" />
+    <div class="absolute inset-0 z-[1] bg-[#1A2C46]/40 md:bg-transparent pointer-events-none" aria-hidden="true" />
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
