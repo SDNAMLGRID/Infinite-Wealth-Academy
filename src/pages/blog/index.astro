@@ -9,18 +9,19 @@ const sortedPosts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.
 <GlobalLayout title="Insights & Education | Infinite Wealth Academy" description="Empowering families to understand how money works. Strategies for income protection, tax advantages, and building a lasting legacy.">
   <!-- Blog Hero: logo blended, fully in frame (contain), navy gradient overlay -->
   <section class="relative overflow-hidden py-20 lg:py-24 border-b border-amber-500/20 text-white" style="background-color: #1A2C46;">
-    <!-- Logo layer: full logo visible, no crop (object-contain) -->
+    <!-- Logo layer: full logo visible, large and clearly visible (object-contain) -->
     <img
       src="/infinite_wealth_logo_transparent.svg"
       alt=""
-      class="absolute inset-0 z-0 w-full h-full object-contain object-center opacity-30 p-12 md:p-20"
+      class="absolute inset-0 z-0 w-full h-full object-contain object-center p-4 md:p-8"
+      style="opacity: 0.55;"
       loading="eager"
       aria-hidden="true"
     />
-    <!-- Gradient overlay to blend logo with navy (keeps logo visible) -->
+    <!-- Lighter gradient so logo shows through clearly -->
     <div
       class="absolute inset-0 z-[1] pointer-events-none"
-      style="background: linear-gradient(to right, #1A2C46 0%, rgba(26,44,70,0.75) 35%, rgba(26,44,70,0.5) 50%, rgba(26,44,70,0.75) 65%, #1A2C46 100%);"
+      style="background: linear-gradient(to right, #1A2C46 0%, rgba(26,44,70,0.6) 40%, rgba(26,44,70,0.35) 50%, rgba(26,44,70,0.6) 60%, #1A2C46 100%);"
       aria-hidden="true"
     />
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
