@@ -33,13 +33,22 @@ const frenchPath = pathname.startsWith('/fr') ? pathname : `/fr${pathname === '/
     <header class="sticky top-0 z-50 w-full border-b border-white/10 shadow-sm" style="background-color: #1A2C46;">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-          <a href={localePrefix || '/'} class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
-            <div
-              class="h-9 w-9 md:h-10 md:w-10 rounded-sm"
-              style="background-image: url('/gold-logo-icon.png'); background-size: 220%; background-position: bottom right; background-repeat: no-repeat;"
-              aria-hidden="true"
+          <a
+            href={localePrefix || '/'}
+            class="flex items-center gap-3 shrink-0 group"
+            aria-label="Infinite Wealth Academy Home"
+          >
+            <img
+              src="/logo-icon-blended.webp"
+              alt="Infinite Wealth Academy logo"
+              class="h-9 w-auto object-contain block"
+              loading="eager"
+              decoding="async"
             />
-            <span class="brand-wordmark font-bold text-lg md:text-xl" style="color: #FFFFFF;">
+            <span
+              class="text-[20px] md:text-[21px] font-bold tracking-[0.02em] leading-none text-[#D4AF37] whitespace-nowrap"
+              style='font-family: "Montserrat", "Open Sans", "Lato", sans-serif;'
+            >
               Infinite Wealth Academy
             </span>
           </a>
