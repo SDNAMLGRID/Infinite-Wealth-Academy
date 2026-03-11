@@ -2,8 +2,8 @@
 import GlobalLayout from '../layouts/GlobalLayout.astro';
 ---
 
-<GlobalLayout title="Interactive Resources & Calculators | Infinite Wealth Academy" description="Use our Retirement Income Gap Calculator to discover your potential shortfall. Gain clarity on your financial future with instant, client-side tools.">
-  <!-- Hero (locked theme: #1A2C46, #FFFFFF, #E0E4EB, #CCA03F) -->
+<GlobalLayout title="Interactive Resources & Calculators | Infinite Wealth Academy" description="Use our Retirement Income Gap Calculator and Financial Clarity Assessment. Discover your potential shortfall and blind spots—instant, client-side tools.">
+  <!-- Hero (locked: #1A2C46, #FFFFFF, #E0E4EB, #CCA03F) -->
   <section class="py-20 border-b border-white/10" style="background-color: #1A2C46;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6" style="color: #FFFFFF;">
@@ -15,15 +15,16 @@ import GlobalLayout from '../layouts/GlobalLayout.astro';
     </div>
   </section>
 
-  <!-- Calculator Section -->
-  <section class="py-20 bg-slate-50 min-h-screen">
+  <!-- Tool 1: Retirement Income Gap Calculator -->
+  <section class="py-20 bg-slate-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row" style="border-top: 4px solid #CCA03F;">
-        <!-- Input Form -->
-        <div class="p-10 md:w-1/2 bg-white border-r border-slate-100">
-          <h2 class="text-2xl font-bold text-slate-900 mb-6">Retirement Income Gap Calculator</h2>
-          <p class="text-slate-600 text-sm mb-8">Enter your current numbers below to estimate what your income will look like in retirement—and discover if you have a hidden gap.</p>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-slate-900">1. Retirement Income Gap Calculator</h2>
+        <p class="mt-4 text-lg text-slate-600">Estimate what your income will look like in retirement—and discover if you have a hidden gap.</p>
+      </div>
 
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row mb-12" style="border-top: 4px solid #CCA03F;">
+        <div class="p-10 md:w-1/2 bg-white border-r border-slate-100">
           <form id="calculator-form" class="space-y-5">
             <div>
               <label class="block text-sm font-bold text-slate-700 mb-1">Current Age</label>
@@ -48,10 +49,8 @@ import GlobalLayout from '../layouts/GlobalLayout.astro';
           </form>
         </div>
 
-        <!-- Results Display (navy panel) -->
         <div class="p-10 md:w-1/2 flex flex-col justify-center border-t md:border-t-0 md:border-l border-white/10" style="background-color: #1A2C46;">
           <h3 class="text-xl font-bold mb-8 border-b border-white/10 pb-4" style="color: #CCA03F;">Your Projections</h3>
-
           <div class="space-y-6 flex-grow">
             <div>
               <p class="text-slate-400 text-sm uppercase tracking-wide">Estimated Total Savings at Retirement</p>
@@ -68,13 +67,77 @@ import GlobalLayout from '../layouts/GlobalLayout.astro';
               <p class="text-2xl font-bold text-red-400" id="resultGap">$0</p>
             </div>
           </div>
-
           <div class="mt-8 pt-6 border-t border-white/10">
-            <p class="text-sm text-slate-300 mb-4">Don't let this gap cost you your generational confidence. Let's fix it through strategic positioning.</p>
-            <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="block w-full text-center px-6 py-3 text-sm font-bold rounded-md transition-all shadow-md hover:brightness-110 hover:scale-[1.02]" style="background-color: #CCA03F; color: #FFFFFF;">
-              Book a Strategy Session
-            </a>
+            <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="block w-full text-center px-6 py-3 text-sm font-bold rounded-md transition-all shadow-md hover:brightness-110 hover:scale-[1.02]" style="background-color: #CCA03F; color: #FFFFFF;">Book a Strategy Session</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tool 2: Financial Clarity Assessment -->
+  <section class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-slate-900">2. Financial Clarity Assessment</h2>
+        <p class="mt-4 text-lg text-slate-600">Saving alone isn't enough. Do you know where your blind spots are? Answer these 4 questions to find out.</p>
+      </div>
+
+      <div class="bg-slate-50 rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col lg:flex-row">
+        <div class="p-10 lg:w-2/3 bg-white">
+          <form id="clarity-form" class="space-y-8">
+            <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-6">
+              <div class="flex-1 pr-4">
+                <h4 class="font-bold text-slate-900 text-lg">1. Income Protection</h4>
+                <p class="text-sm text-slate-600 mt-1">If you or your spouse could no longer work due to illness or injury, is your current income fully protected without draining your savings?</p>
+              </div>
+              <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-700">
+                <option value="0">No</option>
+                <option value="25">Yes</option>
+              </select>
+            </div>
+            <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-6">
+              <div class="flex-1 pr-4">
+                <h4 class="font-bold text-slate-900 text-lg">2. Living Benefits</h4>
+                <p class="text-sm text-slate-600 mt-1">Do you have an insurance policy that allows you to access funds while you are still living to cover sudden medical or life emergencies?</p>
+              </div>
+              <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-700">
+                <option value="0">No</option>
+                <option value="25">Yes</option>
+              </select>
+            </div>
+            <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-6">
+              <div class="flex-1 pr-4">
+                <h4 class="font-bold text-slate-900 text-lg">3. Tax-Advantaged Strategies</h4>
+                <p class="text-sm text-slate-600 mt-1">Are your retirement assets strategically positioned to minimize your tax burden when you begin making withdrawals?</p>
+              </div>
+              <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-700">
+                <option value="0">No</option>
+                <option value="25">Yes</option>
+              </select>
+            </div>
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1 pr-4">
+                <h4 class="font-bold text-slate-900 text-lg">4. Retirement Account Tracking</h4>
+                <p class="text-sm text-slate-600 mt-1">Do you have full control and understanding of what is happening to all previous employer retirement accounts (e.g., old 401ks)?</p>
+              </div>
+              <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-700">
+                <option value="0">No</option>
+                <option value="25">Yes</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <div class="p-10 lg:w-1/3 flex flex-col items-center justify-center text-center border-t lg:border-t-0 lg:border-l border-white/10" style="background-color: #1A2C46;">
+          <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-slate-300">Your Clarity Score</h3>
+          <div class="relative w-40 h-40 flex items-center justify-center rounded-full border-8 mb-6 shadow-lg transition-colors duration-500 bg-white/5" id="score-circle" style="border-color: #ef4444;">
+            <span class="text-5xl font-extrabold" style="color: #FFFFFF;" id="clarity-score">0%</span>
+          </div>
+          <p class="text-slate-300 text-sm mb-8 min-h-[40px]" id="clarity-message">
+            You have significant financial blind spots. You are exposed to risks that could threaten your generational wealth.
+          </p>
+          <a href="https://calendly.com/500families-infinitewealthacademy/30min" target="_blank" rel="noopener noreferrer" class="w-full px-6 py-4 text-base font-bold rounded-md transition-all shadow-lg hover:brightness-110 hover:scale-[1.02]" style="background-color: #CCA03F; color: #FFFFFF;">Let's Fix Your Blind Spots</a>
         </div>
       </div>
     </div>
@@ -122,5 +185,35 @@ import GlobalLayout from '../layouts/GlobalLayout.astro';
       input.addEventListener('input', calculateRetirement);
     });
     calculateRetirement();
+
+    function calculateClarity() {
+      const inputs = document.querySelectorAll('.clarity-input');
+      let totalScore = 0;
+      inputs.forEach(function (input) {
+        totalScore += parseInt(input.value, 10);
+      });
+
+      const scoreDisplay = document.getElementById('clarity-score');
+      const scoreCircle = document.getElementById('score-circle');
+      const messageDisplay = document.getElementById('clarity-message');
+
+      scoreDisplay.textContent = totalScore + '%';
+
+      if (totalScore === 100) {
+        scoreCircle.style.borderColor = '#22c55e';
+        messageDisplay.textContent = 'Excellent! You have a high level of financial clarity and strategic protection.';
+      } else if (totalScore >= 50) {
+        scoreCircle.style.borderColor = '#eab308';
+        messageDisplay.textContent = "You have a good foundation, but there are still hidden risks threatening your generational wealth.";
+      } else {
+        scoreCircle.style.borderColor = '#ef4444';
+        messageDisplay.textContent = 'You have significant financial blind spots. You are exposed to risks that could threaten your financial future.';
+      }
+    }
+
+    document.querySelectorAll('.clarity-input').forEach(function (input) {
+      input.addEventListener('change', calculateClarity);
+    });
+    calculateClarity();
   </script>
 </GlobalLayout>
