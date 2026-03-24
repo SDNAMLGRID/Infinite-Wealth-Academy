@@ -97,87 +97,51 @@ import GlobalLayout from '../../layouts/GlobalLayout.astro';
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-extrabold text-slate-900">2. Évaluation de clarté financière</h2>
-        <p class="mt-4 text-lg text-slate-600">La protection financière peut être simple. Répondez à ces 4 questions pour révéler vos angles morts.</p>
+        <p class="mt-4 text-lg text-slate-600">Cela prend 2 minutes et affiche votre score de risque de revenu. Un excellent point de départ pour repérer vos vulnérabilités.</p>
       </div>
 
       <div class="bg-slate-50 rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col lg:flex-row">
         <div class="p-10 lg:w-2/3 bg-white">
-          <form id="clarity-form" class="space-y-8">
-            <div class="border-b border-slate-100 pb-6">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div class="flex-1 pr-4">
-                  <h4 class="font-bold text-slate-900 text-lg">1. Protection du revenu</h4>
-                  <p class="text-slate-700 mt-1">Si vous ou votre conjoint ne pouviez plus travailler (maladie, accident), votre revenu est-il protégé sans épuiser votre épargne ?</p>
-                </div>
-                <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-900">
-                  <option value="0">Non</option>
-                  <option value="25">Oui</option>
-                </select>
-              </div>
-              <div class="p-4 rounded-lg border-l-2 text-sm text-slate-600 italic bg-slate-50" style="border-left-color: #CCA03F;">
-                <strong>Pourquoi c’est important :</strong> Beaucoup assurent leur maison et leur voiture, mais oublient leur actif le plus précieux : la capacité à générer un revenu. La clarté exige un filet de sécurité stratégique.
-              </div>
-            </div>
-
-            <div class="border-b border-slate-100 pb-6">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div class="flex-1 pr-4">
-                  <h4 class="font-bold text-slate-900 text-lg">2. Prestations du vivant</h4>
-                  <p class="text-slate-700 mt-1">Avez-vous une assurance qui permet d’accéder à des fonds de votre vivant pour couvrir une urgence médicale ou de vie ?</p>
-                </div>
-                <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-900">
-                  <option value="0">Non</option>
-                  <option value="25">Oui</option>
-                </select>
-              </div>
-              <div class="p-4 rounded-lg border-l-2 text-sm text-slate-600 italic bg-slate-50" style="border-left-color: #CCA03F;">
-                <strong>Pourquoi c’est important :</strong> L’assurance vie traditionnelle paie souvent au décès. Les stratégies modernes utilisent des « prestations du vivant » : vous n’avez pas à mourir pour bénéficier d’un soutien en cas d’événement de santé majeur.
-              </div>
-            </div>
-
-            <div class="border-b border-slate-100 pb-6">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div class="flex-1 pr-4">
-                  <h4 class="font-bold text-slate-900 text-lg">3. Stratégies fiscalement avantageuses</h4>
-                  <p class="text-slate-700 mt-1">Vos actifs retraite sont-ils positionnés pour réduire l’impôt lors des retraits ?</p>
-                </div>
-                <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-900">
-                  <option value="0">Non</option>
-                  <option value="25">Oui</option>
-                </select>
-              </div>
-              <div class="p-4 rounded-lg border-l-2 text-sm text-slate-600 italic bg-slate-50" style="border-left-color: #CCA03F;">
-                <strong>Pourquoi c’est important :</strong> Ce n’est pas seulement ce que vous gagnez, c’est ce que vous gardez. Sans positionnement fiscal, l’impôt peut devenir votre plus grande dépense à la retraite.
-              </div>
-            </div>
-
-            <div>
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div class="flex-1 pr-4">
-                  <h4 class="font-bold text-slate-900 text-lg">4. Flexibilité du revenu à la retraite</h4>
-                  <p class="text-slate-700 mt-1">Avez-vous une visibilité et un contrôle sur vos anciens comptes retraite (ex. anciens 401(k)) ?</p>
-                </div>
-                <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-900">
-                  <option value="0">Non</option>
-                  <option value="25">Oui</option>
-                </select>
-              </div>
-              <div class="p-4 rounded-lg border-l-2 text-sm text-slate-600 italic bg-slate-50" style="border-left-color: #CCA03F;">
-                <strong>Pourquoi c’est important :</strong> Laisser des comptes derrière soi après un changement d’emploi est un risque majeur. Ils manquent souvent de flexibilité pour s’adapter à la vie et à la volatilité des marchés.
-              </div>
-            </div>
-          </form>
+          <div class="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-bold tracking-[0.12em] uppercase text-amber-700 mb-6">
+            Outil de conversion
+          </div>
+          <h3 class="text-2xl font-extrabold text-slate-900 mb-4">Income Shock Assessment</h3>
+          <p class="text-slate-700 leading-relaxed mb-6">
+            Au lieu d’un questionnaire interne en 4 points, cet outil guidé attribue un score de risque de revenu personnalisé et oriente naturellement les prospects qualifiés vers votre accompagnement.
+          </p>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Environ 2 minutes pour compléter</li>
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Met en lumière les angles morts liés au revenu</li>
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Conçu pour capturer et qualifier des leads</li>
+          </ul>
+          <a
+            href="https://incomeshieldlabs.com/quiz/start?ref=user_3ASlYXpUox6nbBXRZ2xVw2Qentr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-8 inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-md transition-all shadow-lg hover:brightness-110 hover:scale-[1.02]"
+            style="background-color: #CCA03F; color: #FFFFFF;"
+          >
+            Démarrer l’évaluation Income Shock
+          </a>
         </div>
 
         <div class="p-10 lg:w-1/3 flex flex-col items-center justify-center text-center border-t lg:border-t-0 lg:border-l border-white/10" style="background-color: #1A2C46;">
-          <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-slate-300">Votre score de clarté</h3>
-          <div class="relative w-40 h-40 flex items-center justify-center rounded-full border-8 mb-6 shadow-lg transition-colors duration-500 bg-white/5" id="score-circle" style="border-color: #ef4444;">
-            <span class="text-5xl font-extrabold" style="color: #FFFFFF;" id="clarity-score">0%</span>
+          <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-slate-300">Ce que vous obtenez</h3>
+          <div class="relative w-40 h-40 flex items-center justify-center rounded-full border-8 mb-6 shadow-lg bg-white/5" style="border-color: #CCA03F;">
+            <span class="text-3xl font-extrabold" style="color: #FFFFFF;">2 min</span>
           </div>
-          <p class="text-slate-300 text-sm mb-8 min-h-[60px] leading-relaxed" id="clarity-message">
-            Vous avez des angles morts financiers importants. Des risques peuvent menacer votre patrimoine.
+          <p class="text-slate-300 text-sm mb-8 min-h-[60px] leading-relaxed">
+            Vous recevez un score de risque de revenu et une prochaine action claire pour mieux protéger vos flux de revenus.
           </p>
-          <a href="/fr/book" class="w-full px-6 py-4 text-base font-bold rounded-md transition-all shadow-lg hover:brightness-110 hover:scale-[1.02]" style="background-color: #CCA03F; color: #FFFFFF;">Corrigeons vos angles morts</a>
+          <a
+            href="https://incomeshieldlabs.com/quiz/start?ref=user_3ASlYXpUox6nbBXRZ2xVw2Qentr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full px-6 py-4 text-base font-bold rounded-md transition-all shadow-lg hover:brightness-110 hover:scale-[1.02]"
+            style="background-color: #CCA03F; color: #FFFFFF;"
+          >
+            Faire le quiz de 2 minutes
+          </a>
         </div>
       </div>
     </div>
@@ -230,34 +194,5 @@ import GlobalLayout from '../../layouts/GlobalLayout.astro';
     });
     calculateRetirement();
 
-    function calculateClarity() {
-      const inputs = document.querySelectorAll('.clarity-input');
-      let totalScore = 0;
-      inputs.forEach(function (input) {
-        totalScore += parseInt(input.value, 10);
-      });
-
-      const scoreDisplay = document.getElementById('clarity-score');
-      const scoreCircle = document.getElementById('score-circle');
-      const messageDisplay = document.getElementById('clarity-message');
-
-      scoreDisplay.textContent = totalScore + '%';
-
-      if (totalScore === 100) {
-        scoreCircle.style.borderColor = '#22c55e';
-        messageDisplay.textContent = 'Excellent ! Vous avez une grande clarté financière. Optimisons votre plan.';
-      } else if (totalScore >= 50) {
-        scoreCircle.style.borderColor = '#eab308';
-        messageDisplay.textContent = 'Vous avez une base solide, mais des protections clés peuvent manquer. Renforçons votre flexibilité.';
-      } else {
-        scoreCircle.style.borderColor = '#ef4444';
-        messageDisplay.textContent = 'Vos angles morts sont importants. Planifions une analyse des besoins financiers pour sécuriser vos objectifs.';
-      }
-    }
-
-    document.querySelectorAll('.clarity-input').forEach(function (input) {
-      input.addEventListener('change', calculateClarity);
-    });
-    calculateClarity();
   </script>
 </GlobalLayout>

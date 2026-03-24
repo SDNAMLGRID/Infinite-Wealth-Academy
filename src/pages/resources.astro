@@ -92,98 +92,56 @@ import GlobalLayout from '../layouts/GlobalLayout.astro';
     </div>
   </section>
 
-  <!-- Tool 2: Financial Clarity Assessment -->
+  <!-- Tool 2: Income Shock Assessment (Lead Funnel) -->
   <section class="py-20 bg-white border-t border-slate-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-extrabold text-slate-900">2. Financial Clarity Assessment</h2>
-        <p class="mt-4 text-lg text-slate-600">Financial protection should be simple. Answer these 4 questions to uncover your hidden blind spots.</p>
+        <p class="mt-4 text-lg text-slate-600">It takes 2 minutes and shows your Income Risk Score. A quick way to uncover hidden vulnerabilities before they become expensive.</p>
       </div>
 
       <div class="bg-slate-50 rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col lg:flex-row">
-        <!-- Questions with "Why it matters" -->
         <div class="p-10 lg:w-2/3 bg-white">
-          <form id="clarity-form" class="space-y-8">
-            <!-- Question 1 -->
-            <div class="border-b border-slate-100 pb-6">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div class="flex-1 pr-4">
-                  <h4 class="font-bold text-slate-900 text-lg">1. Income Protection</h4>
-                  <p class="text-slate-700 mt-1">If you or your spouse could no longer work due to illness or injury, is your current income fully protected without draining your savings?</p>
-                </div>
-                <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-900">
-                  <option value="0">No</option>
-                  <option value="25">Yes</option>
-                </select>
-              </div>
-              <div class="p-4 rounded-lg border-l-2 text-sm text-slate-600 italic bg-slate-50" style="border-left-color: #CCA03F;">
-                <strong>Why it matters:</strong> Most families insure their homes and cars, but forget to protect their greatest asset—their ability to earn an income. True financial clarity requires a strategic safety net.
-              </div>
-            </div>
-
-            <!-- Question 2 -->
-            <div class="border-b border-slate-100 pb-6">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div class="flex-1 pr-4">
-                  <h4 class="font-bold text-slate-900 text-lg">2. Living Benefits</h4>
-                  <p class="text-slate-700 mt-1">Do you have an insurance policy that allows you to access funds while you are still living to cover sudden medical or life emergencies?</p>
-                </div>
-                <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-900">
-                  <option value="0">No</option>
-                  <option value="25">Yes</option>
-                </select>
-              </div>
-              <div class="p-4 rounded-lg border-l-2 text-sm text-slate-600 italic bg-slate-50" style="border-left-color: #CCA03F;">
-                <strong>Why it matters:</strong> Traditional life insurance only pays out when you pass away. Modern strategies utilize "living benefits," meaning you don't have to die to use your policy if a severe health event occurs.
-              </div>
-            </div>
-
-            <!-- Question 3 -->
-            <div class="border-b border-slate-100 pb-6">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div class="flex-1 pr-4">
-                  <h4 class="font-bold text-slate-900 text-lg">3. Tax-Advantaged Strategies</h4>
-                  <p class="text-slate-700 mt-1">Are your retirement assets strategically positioned to minimize your tax burden when you begin making withdrawals?</p>
-                </div>
-                <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-900">
-                  <option value="0">No</option>
-                  <option value="25">Yes</option>
-                </select>
-              </div>
-              <div class="p-4 rounded-lg border-l-2 text-sm text-slate-600 italic bg-slate-50" style="border-left-color: #CCA03F;">
-                <strong>Why it matters:</strong> It's not just about what you earn; it's about what you keep. Without tax-advantaged positioning, taxes can become your single biggest expense in retirement.
-              </div>
-            </div>
-
-            <!-- Question 4 -->
-            <div>
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div class="flex-1 pr-4">
-                  <h4 class="font-bold text-slate-900 text-lg">4. Retirement Income Flexibility</h4>
-                  <p class="text-slate-700 mt-1">Do you have full control and understanding of what is happening to your previous employer retirement accounts (e.g., old 401ks)?</p>
-                </div>
-                <select class="clarity-input flex-shrink-0 w-24 px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-[#CCA03F] focus:border-[#CCA03F] bg-slate-50 font-bold text-slate-900">
-                  <option value="0">No</option>
-                  <option value="25">Yes</option>
-                </select>
-              </div>
-              <div class="p-4 rounded-lg border-l-2 text-sm text-slate-600 italic bg-slate-50" style="border-left-color: #CCA03F;">
-                <strong>Why it matters:</strong> Leaving retirement accounts behind after leaving a job is a massive risk. These accounts often lack the flexibility required to adapt to life's changes or market volatility.
-              </div>
-            </div>
-          </form>
+          <div class="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-bold tracking-[0.12em] uppercase text-amber-700 mb-6">
+            Lead Funnel Tool
+          </div>
+          <h3 class="text-2xl font-extrabold text-slate-900 mb-4">Income Shock Assessment</h3>
+          <p class="text-slate-700 leading-relaxed mb-6">
+            Instead of a basic 4-question checklist, this guided assessment gives prospects a personalized Income Risk Score and naturally moves qualified leads into your advisory flow.
+          </p>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Takes about 2 minutes to complete</li>
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Highlights income-risk blind spots clearly</li>
+            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Designed to capture and qualify leads</li>
+          </ul>
+          <a
+            href="https://incomeshieldlabs.com/quiz/start?ref=user_3ASlYXpUox6nbBXRZ2xVw2Qentr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-8 inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-md transition-all shadow-lg hover:brightness-110 hover:scale-[1.02]"
+            style="background-color: #CCA03F; color: #FFFFFF;"
+          >
+            Start Income Shock Assessment
+          </a>
         </div>
 
-        <!-- Clarity Score Panel -->
         <div class="p-10 lg:w-1/3 flex flex-col items-center justify-center text-center border-t lg:border-t-0 lg:border-l border-white/10" style="background-color: #1A2C46;">
-          <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-slate-300">Your Clarity Score</h3>
-          <div class="relative w-40 h-40 flex items-center justify-center rounded-full border-8 mb-6 shadow-lg transition-colors duration-500 bg-white/5" id="score-circle" style="border-color: #ef4444;">
-            <span class="text-5xl font-extrabold" style="color: #FFFFFF;" id="clarity-score">0%</span>
+          <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-slate-300">What You Get</h3>
+          <div class="relative w-40 h-40 flex items-center justify-center rounded-full border-8 mb-6 shadow-lg bg-white/5" style="border-color: #CCA03F;">
+            <span class="text-3xl font-extrabold" style="color: #FFFFFF;">2 min</span>
           </div>
-          <p class="text-slate-300 text-sm mb-8 min-h-[60px] leading-relaxed" id="clarity-message">
-            You have significant financial blind spots. You are exposed to risks that could threaten your generational wealth.
+          <p class="text-slate-300 text-sm mb-8 min-h-[60px] leading-relaxed">
+            Receive an Income Risk Score and a clear next step to protect your cash flow and long-term wealth plan.
           </p>
-          <a href="/book" class="w-full px-6 py-4 text-base font-bold rounded-md transition-all shadow-lg hover:brightness-110 hover:scale-[1.02]" style="background-color: #CCA03F; color: #FFFFFF;">Let's Fix Your Blind Spots</a>
+          <a
+            href="https://incomeshieldlabs.com/quiz/start?ref=user_3ASlYXpUox6nbBXRZ2xVw2Qentr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full px-6 py-4 text-base font-bold rounded-md transition-all shadow-lg hover:brightness-110 hover:scale-[1.02]"
+            style="background-color: #CCA03F; color: #FFFFFF;"
+          >
+            Take the 2-Minute Quiz
+          </a>
         </div>
       </div>
     </div>
@@ -236,34 +194,5 @@ import GlobalLayout from '../layouts/GlobalLayout.astro';
     });
     calculateRetirement();
 
-    function calculateClarity() {
-      const inputs = document.querySelectorAll('.clarity-input');
-      let totalScore = 0;
-      inputs.forEach(function (input) {
-        totalScore += parseInt(input.value, 10);
-      });
-
-      const scoreDisplay = document.getElementById('clarity-score');
-      const scoreCircle = document.getElementById('score-circle');
-      const messageDisplay = document.getElementById('clarity-message');
-
-      scoreDisplay.textContent = totalScore + '%';
-
-      if (totalScore === 100) {
-        scoreCircle.style.borderColor = '#22c55e';
-        messageDisplay.textContent = "Excellent! You have a high level of financial clarity and strategic protection. Let's optimize your current plan.";
-      } else if (totalScore >= 50) {
-        scoreCircle.style.borderColor = '#eab308';
-        messageDisplay.textContent = "You have a foundation, but traditional advice may have overlooked key protections. Let's secure your flexibility.";
-      } else {
-        scoreCircle.style.borderColor = '#ef4444';
-        messageDisplay.textContent = "You have significant financial blind spots. Let's schedule a Financial Needs Analysis (FNA) to map your unique goals safely.";
-      }
-    }
-
-    document.querySelectorAll('.clarity-input').forEach(function (input) {
-      input.addEventListener('change', calculateClarity);
-    });
-    calculateClarity();
   </script>
 </GlobalLayout>
