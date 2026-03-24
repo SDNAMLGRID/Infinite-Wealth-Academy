@@ -34,41 +34,40 @@ const frenchPath = pathname.startsWith('/fr') ? pathname : `/fr${pathname === '/
     <!-- Sticky Header (Deep navy #1A2C46 – blends with hero) -->
     <header class="sticky top-0 z-50 w-full border-b border-white/10 shadow-sm" style="background-color: #1A2C46;">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
+        <div class="flex justify-between items-center h-16 md:h-[4.25rem]">
           <a
             href={localePrefix || '/'}
-            class="flex items-center gap-3 shrink-0 group"
+            class="flex items-center gap-2 shrink-0 group mr-4 md:mr-6"
             aria-label="Infinite Wealth Academy Home"
           >
             <img
               src="/logo-icon-blended.webp"
               alt="Infinite Wealth Academy logo"
-              class="h-12 w-auto md:h-[3.75rem] object-contain block"
+              class="h-9 w-auto md:h-10 object-contain block"
               loading="eager"
               decoding="async"
             />
-            <span
-              class="brand-wordmark text-[20px] md:text-[21px] leading-none whitespace-nowrap"
-            >
-              Infinite Wealth Academy
+            <span class="brand-wordmark leading-none">
+              <span class="block text-[1.08rem] md:text-[1.2rem]">Infinite Wealth</span>
+              <span class="block text-[1.05rem] md:text-[1.16rem] -mt-0.5">Academy</span>
             </span>
           </a>
 
-          <nav class="hidden md:flex space-x-8">
-            <a href={`${localePrefix}/`} class="font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">{currentLocale === 'fr' ? 'Accueil' : 'Home'}</a>
-            <a href={`${localePrefix}/mission`} class="font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">{currentLocale === 'fr' ? 'Mission' : 'Mission'}</a>
-            <a href={`${localePrefix}/who-we-help`} class="font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">{currentLocale === 'fr' ? 'Qui nous aidons' : 'Who We Help'}</a>
-            <a href={`${localePrefix}/blog`} class="font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">{currentLocale === 'fr' ? 'Insights' : 'Insights'}</a>
-            <a href={`${localePrefix}/resources`} class="font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">{currentLocale === 'fr' ? 'Ressources' : 'Resources'}</a>
+          <nav class="hidden md:flex items-center gap-4 lg:gap-5 mr-3">
+            <a href={`${localePrefix}/`} class="text-[0.9rem] font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">{currentLocale === 'fr' ? 'Accueil' : 'Home'}</a>
+            <a href={`${localePrefix}/mission`} class="text-[0.9rem] font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">{currentLocale === 'fr' ? 'Mission' : 'Mission'}</a>
+            <a href={`${localePrefix}/who-we-help`} class="text-[0.9rem] font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">{currentLocale === 'fr' ? 'Qui nous aidons' : 'Who We Help'}</a>
+            <a href={`${localePrefix}/blog`} class="text-[0.9rem] font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">{currentLocale === 'fr' ? 'Insights' : 'Insights'}</a>
+            <a href={`${localePrefix}/resources`} class="text-[0.9rem] font-medium transition-colors hover:opacity-90" style="color: #FFFFFF;">{currentLocale === 'fr' ? 'Ressources' : 'Resources'}</a>
           </nav>
 
-          <div class="hidden md:flex items-center gap-4">
-            <div class="flex items-center gap-3 border-l border-white/10 pl-4">
-              <a href={englishPath} class="text-sm font-bold transition-colors hover:opacity-90" style={`color: ${currentLocale === 'en' ? '#CCA03F' : '#E0E4EB'};`}>EN</a>
-              <span class="text-slate-600">|</span>
-              <a href={frenchPath} class="text-sm font-bold transition-colors hover:opacity-90" style={`color: ${currentLocale === 'fr' ? '#CCA03F' : '#E0E4EB'};`}>FR</a>
+          <div class="hidden md:flex items-center gap-2.5">
+            <div class="flex items-center gap-2 border-l border-white/10 pl-3">
+              <a href={englishPath} class="text-[0.72rem] font-semibold tracking-wide transition-colors hover:opacity-90" style={`color: ${currentLocale === 'en' ? '#CCA03F' : '#E0E4EB'};`}>EN</a>
+              <span class="text-slate-600 text-xs">|</span>
+              <a href={frenchPath} class="text-[0.72rem] font-semibold tracking-wide transition-colors hover:opacity-90" style={`color: ${currentLocale === 'fr' ? '#CCA03F' : '#E0E4EB'};`}>FR</a>
             </div>
-            <a href={`${localePrefix}/book`} class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-md transition-all shadow-md hover:brightness-110" style="background-color: #CCA03F; color: #FFFFFF;">
+            <a href={`${localePrefix}/book`} class="inline-flex items-center justify-center px-3.5 py-2 border border-transparent text-[0.8rem] font-bold rounded-md transition-all shadow-md hover:brightness-110" style="background-color: #CCA03F; color: #FFFFFF;">
               {currentLocale === 'fr' ? 'Consultation gratuite' : 'Get a Free Consultation'}
             </a>
           </div>
