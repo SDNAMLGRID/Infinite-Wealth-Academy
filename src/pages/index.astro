@@ -2,6 +2,40 @@
 import GlobalLayout from '../layouts/GlobalLayout.astro';
 import OfferingsGrid from '../components/OfferingsGrid.astro';
 import TeamGrid from '../components/TeamGrid.astro';
+
+const clientReviews = [
+  {
+    name: 'Michele H.',
+    initials: 'MH',
+    quote:
+      'Working with Koumba was a great experience. She took the time to clearly explain all of my options and made sure I fully understood the policy before moving forward. I never felt pressured, and she was very transparent throughout the entire process. The application and approval process were smooth and easy thanks to her guidance. I highly recommend Koumba to anyone looking for someone knowledgeable and trustworthy to help with their financial protection.',
+  },
+  {
+    name: 'Francois K.',
+    initials: 'FK',
+    image: '/francois-k.webp',
+    quote:
+      'Koumba made the entire process simple and stress-free. She walked me through the different options and answered every question I had with patience and honesty. What I appreciated most was her transparency and how she focused on what was best for my situation. The whole transaction was smooth from start to finish. I would definitely recommend working with Koumba if you are looking for someone professional and reliable.',
+  },
+  {
+    name: 'Tabitha R.',
+    initials: 'TR',
+    quote:
+      'I had a wonderful experience working with Koumba. She was very professional, knowledgeable, and took the time to understand my needs before recommending a policy. She explained everything clearly and made sure I was comfortable with every step of the process. It felt good working with someone who is honest and truly cares about helping families protect their future. I am very happy with my decision.',
+  },
+  {
+    name: 'Beatrice T.',
+    initials: 'BT',
+    quote:
+      'Koumba was absolutely wonderful to work with. She was very patient and took the time to explain everything in a way that was easy for me to understand. I appreciated how transparent she was about the policy options and what would work best for my situation. The whole process was smooth and stress-free. I truly felt like she cared about helping me make the right decision for my future.',
+  },
+  {
+    name: 'Maryam Kaba',
+    initials: 'MK',
+    quote:
+      'Working with Koumba was such a positive experience. She is very professional, knowledgeable, and genuinely cares about helping people protect their families. She explained everything clearly and answered all of my questions without rushing me. I felt confident and comfortable moving forward with my policy because of her honesty and guidance. I highly recommend Koumba to anyone looking for someone trustworthy and dedicated.',
+  },
+];
 ---
 
 <GlobalLayout title="Infinite Wealth Academy | Protect, Grow & Control Your Financial Future" description="Secure your family's financial future with generational confidence. Strategic protection and tailored financial plans. Free consultation.">
@@ -115,29 +149,112 @@ import TeamGrid from '../components/TeamGrid.astro';
 
   <OfferingsGrid />
 
-  <!-- Testimonials -->
-  <section class="py-20 bg-slate-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-extrabold mb-16"><span class="text-amber-500">What My Clients Say</span></h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-slate-800 p-8 rounded-2xl flex flex-col items-center border border-slate-700">
-          <img loading="lazy" src="/michael-headshot.webp" alt="Michael Lynch" class="w-20 h-20 rounded-full object-cover mb-6 border-2 border-amber-500 shadow-md" />
-          <p class="italic text-slate-300 mb-6 flex-grow">"Before working with Koumba, we thought saving was enough. She helped us understand protection and flexibility in a way that finally made sense. We feel more confident about our future."</p>
-          <p class="font-bold text-amber-500">— Michael Lynch</p>
-        </div>
-        <div class="bg-slate-800 p-8 rounded-2xl flex flex-col items-center border border-slate-700">
-          <img loading="lazy" src="/camillus-headshot.png" alt="Camillus Alemoh" class="w-20 h-20 rounded-full object-cover mb-6 border-2 border-amber-500 shadow-md" />
-          <p class="italic text-slate-300 mb-6 flex-grow">"Koumba has a gift for simplifying complex financial topics. Instead of feeling overwhelmed, we now feel informed and in control."</p>
-          <p class="font-bold text-amber-500">— Camillus Alemoh</p>
-        </div>
-        <div class="bg-slate-800 p-8 rounded-2xl flex flex-col items-center border border-slate-700">
-          <img loading="lazy" src="/victoria-headshot.webp" alt="Victoria Amusa" class="w-20 h-20 rounded-full object-cover mb-6 border-2 border-amber-500 shadow-md" />
-          <p class="italic text-slate-300 mb-6 flex-grow">"The clarity we gained during our strategy session changed how we think about retirement planning. We finally understand our options."</p>
-          <p class="font-bold text-amber-500">— Victoria Amusa</p>
-        </div>
+  <!-- Reviews Flow -->
+  <section class="reviews-section py-24 text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-amber-400 tracking-[0.22em] uppercase text-xs font-semibold">Client Reviews</p>
+        <h2 class="mt-4 text-3xl md:text-4xl font-extrabold">Client Reviews for Koumba</h2>
+      </div>
+
+      <div class="reviews-flow relative">
+        <div class="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gradient-to-b from-transparent via-amber-400/50 to-transparent -translate-x-1/2" aria-hidden="true"></div>
+
+        {clientReviews.map((review, idx) => (
+          <article class={`review-item ${idx % 2 === 0 ? 'md:pr-[56%]' : 'md:pl-[56%]'}`} style={`--review-delay:${idx * 0.16}s;`}>
+            <div class="review-card rounded-3xl border border-white/10 bg-slate-900/70 p-6 md:p-8 shadow-2xl backdrop-blur-sm">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-4">
+                  {review.image ? (
+                    <img
+                      loading="lazy"
+                      src={review.image}
+                      alt={review.name}
+                      class="h-14 w-14 rounded-full object-cover border-2 border-amber-400 shadow-md"
+                    />
+                  ) : (
+                    <div class="h-14 w-14 rounded-full border border-amber-400/60 bg-slate-800 text-amber-300 flex items-center justify-center font-bold text-sm tracking-wide">
+                      {review.initials}
+                    </div>
+                  )}
+                  <div>
+                    <h3 class="font-bold text-lg leading-tight">{review.name}</h3>
+                    <div class="mt-1 flex items-center gap-1 text-amber-400" aria-label="Five star review">
+                      {Array.from({ length: 5 }).map(() => (
+                        <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.222 3.761a1 1 0 00.95.69h3.955c.969 0 1.371 1.24.588 1.81l-3.2 2.326a1 1 0 00-.364 1.118l1.222 3.761c.3.922-.755 1.688-1.54 1.118l-3.2-2.326a1 1 0 00-1.176 0l-3.2 2.326c-.784.57-1.838-.196-1.539-1.118l1.222-3.761a1 1 0 00-.364-1.118L2.334 9.188c-.783-.57-.38-1.81.588-1.81h3.955a1 1 0 00.95-.69l1.222-3.761z" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <span class="text-5xl leading-none text-amber-300/60 select-none" aria-hidden="true">"</span>
+              </div>
+              <blockquote class="mt-5 text-slate-200 leading-relaxed text-[1.02rem]">
+                {review.quote}
+              </blockquote>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   </section>
 
   <TeamGrid />
 </GlobalLayout>
+
+<style>
+  .reviews-section {
+    background:
+      radial-gradient(1200px 500px at 0% 0%, rgba(204, 160, 63, 0.16) 0%, transparent 60%),
+      radial-gradient(900px 400px at 100% 100%, rgba(212, 175, 55, 0.1) 0%, transparent 58%),
+      #0f172a;
+  }
+
+  .review-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: review-enter 0.75s ease-out forwards;
+    animation-delay: var(--review-delay, 0s);
+  }
+
+  .review-card {
+    transition: transform 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
+  }
+
+  .review-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212, 175, 55, 0.7);
+    box-shadow: 0 20px 40px rgba(2, 6, 23, 0.5);
+  }
+
+  @keyframes review-enter {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .review-item {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .review-item {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+    .review-card {
+      transition: none;
+    }
+    .review-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+</style>

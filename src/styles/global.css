@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@600;700&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 .brand-wordmark {
-  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  letter-spacing: 0.03em;
+  font-family: 'Cinzel', 'Times New Roman', serif;
+  font-weight: 700;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.065em;
+  color: #d4af37;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35), 0 0 10px rgba(212, 175, 55, 0.18);
 }
