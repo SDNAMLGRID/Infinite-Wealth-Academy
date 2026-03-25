@@ -1,7 +1,5 @@
 ---
 import GlobalLayout from '../layouts/GlobalLayout.astro';
-import OfferingsGrid from '../components/OfferingsGrid.astro';
-import TeamGrid from '../components/TeamGrid.astro';
 
 const clientReviews = [
   {
@@ -38,35 +36,32 @@ const clientReviews = [
 ];
 ---
 
-<GlobalLayout title="Infinite Wealth Academy | Protect, Grow & Control Your Financial Future" description="Secure your family's financial future with generational confidence. Strategic protection and tailored financial plans. Free consultation.">
-  <!-- Hero: full-bleed blended split – family image as background, navy left with gradient blend (~75vh) -->
-  <section class="relative min-h-[78vh] overflow-hidden flex flex-col justify-center" aria-label="Hero">
-    <!-- Full-width background image (right-aligned so family is prominent) -->
+<GlobalLayout
+  title="Infinite Wealth Academy | Clarity, Protection & Generational Confidence"
+  description="Protect income and build generational confidence—with plain-language education, free tools, and a complimentary strategy conversation with Koumba R. Koundouno."
+>
+  <!-- 1. Hero: outcome + primary CTA first -->
+  <section class="relative min-h-[min(78vh,920px)] overflow-hidden flex flex-col justify-center" aria-label="Secure your financial future">
     <div
       class="absolute inset-0 z-0 bg-cover bg-no-repeat"
       style="background-image: url('/hero-family.webp.png'); background-position: right center;"
       role="img"
       aria-hidden="true"
     />
-    <!-- Gradient overlay: solid navy left, blending into image (family “walking into” the blue) -->
     <div
       class="absolute inset-0 z-[1]"
       style="background: linear-gradient(to right, #1A2C46 0%, #1A2C46 45%, rgba(26,44,70,0.97) 52%, rgba(26,44,70,0.85) 62%, rgba(26,44,70,0.5) 74%, transparent 88%);"
       aria-hidden="true"
     />
-    <!-- On small screens: light tint over image so text stays readable -->
-    <div
-      class="absolute inset-0 z-[1] bg-[#1A2C46]/50 md:bg-transparent"
-      aria-hidden="true"
-    />
-    <!-- Content: left-aligned over solid navy, generous padding for high-end feel -->
+    <div class="absolute inset-0 z-[1] bg-[#1A2C46]/50 md:bg-transparent" aria-hidden="true" />
     <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="max-w-xl text-center lg:text-left">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: #CCA03F;">Infinite Wealth Academy</p>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight" style="color: #FFFFFF;">
-          Secure Your Family's Financial Future with Generational Confidence
+          Protect income. Build optionality. Leave a legacy you are proud of.
         </h1>
         <p class="text-xl mb-10 leading-relaxed" style="color: #E0E4EB;">
-          Unlock a clear path to lasting wealth. We provide strategic protection and tailored financial plans so you can build and preserve legacy for generations.
+          Plain-language education and protection planning—so your next decision is an informed one, not a guess.
         </p>
         <div class="flex flex-wrap justify-center lg:justify-start gap-4">
           <a
@@ -74,87 +69,171 @@ const clientReviews = [
             class="inline-flex items-center justify-center px-8 py-4 font-bold rounded-lg text-lg transition-all duration-300 hover:brightness-110 hover:scale-[1.02] shadow-lg"
             style="background-color: #CCA03F; color: #FFFFFF;"
           >
-            Start Your Legacy: Schedule a Free Consultation
+            Book a free conversation
+          </a>
+          <a
+            href="/resources"
+            class="inline-flex items-center justify-center px-8 py-4 font-bold rounded-lg text-lg transition-all duration-300 hover:bg-white/10 border border-white/25"
+            style="color: #FFFFFF;"
+          >
+            Try the free tools
           </a>
         </div>
       </div>
     </div>
   </section>
-  <!-- Decorative bar under hero (gold accent, soft fade) -->
   <div class="h-1.5 w-full" style="background: linear-gradient(to right, #CCA03F 0%, rgba(204,160,63,0.6) 40%, transparent 100%);" aria-hidden="true"></div>
 
-  <!-- CTA: Interactive Tools -->
-  <section class="py-12" style="background-color: #1A2C46;">
+  <!-- 2. Why we exist -->
+  <section class="py-20 md:py-24 bg-slate-50" aria-labelledby="why-infinite-wealth">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center font-semibold text-xs uppercase tracking-[0.22em] mb-3" style="color: #B8860B;">
+        Why we exist
+      </p>
+      <h2 id="why-infinite-wealth" class="text-3xl md:text-4xl font-extrabold text-slate-900 text-center max-w-3xl mx-auto leading-tight">
+        Clarity before products. Protection before guesswork.
+      </h2>
+      <p class="mt-6 text-lg text-slate-600 text-center max-w-2xl mx-auto leading-relaxed">
+        Most families are not short on good intentions—they are short on plain-language answers. Infinite Wealth Academy exists so you can understand how money, risk, and protection actually work together, then choose strategies that fit your life—not a one-size-fits-all script.
+      </p>
+      <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+          <h3 class="text-xl font-bold text-slate-900 mb-4 border-b border-amber-200 pb-3">What quietly erodes confidence</h3>
+          <ul class="space-y-3 text-slate-600 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="text-amber-500 shrink-0">✔</span> Retirement accounts left behind after a job change—and what that really costs you</li>
+            <li class="flex items-start gap-2"><span class="text-amber-500 shrink-0">✔</span> Being underinsured on the one asset that funds everything: your income</li>
+            <li class="flex items-start gap-2"><span class="text-amber-500 shrink-0">✔</span> The retirement income gap most calculators never explain in human terms</li>
+            <li class="flex items-start gap-2"><span class="text-amber-500 shrink-0">✔</span> Confusing “saving more” with positioning assets for flexibility and tax-smart income later</li>
+          </ul>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+          <h3 class="text-xl font-bold text-slate-900 mb-4 border-b border-amber-200 pb-3">What we believe instead</h3>
+          <ul class="space-y-3 text-slate-600 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="text-amber-500 shrink-0">✔</span> Education first—you should know why a strategy is recommended, not just that it exists</li>
+            <li class="flex items-start gap-2"><span class="text-amber-500 shrink-0">✔</span> Income protection and living benefits deserve a seat at the table, not an afterthought</li>
+            <li class="flex items-start gap-2"><span class="text-amber-500 shrink-0">✔</span> Tax-aware positioning matters as much as rate of return over a lifetime</li>
+            <li class="flex items-start gap-2"><span class="text-amber-500 shrink-0">✔</span> Project 500 Families: real households moving from uncertainty to generational confidence—by design</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Self-serve clarity (low friction before the ask) -->
+  <section id="tools" class="py-14 md:py-16" style="background-color: #1A2C46;" aria-labelledby="get-clarity">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="text-center md:text-left">
-          <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight" style="color: #FFFFFF;">
-            Get clarity in under 60 seconds
+          <p class="font-semibold text-xs uppercase tracking-[0.22em] mb-2" style="color: #CCA03F;">Get clarity first</p>
+          <h2 id="get-clarity" class="text-2xl md:text-3xl font-extrabold tracking-tight" style="color: #FFFFFF;">
+            Numbers and next steps—in minutes, not mystery
           </h2>
-          <p class="mt-2 text-base md:text-lg max-w-2xl" style="color: #E0E4EB;">
-            Use our Retirement Income Gap Calculator and Financial Clarity Assessment to uncover the risks most families don’t see coming—and learn what to do next.
+          <p class="mt-3 text-base md:text-lg max-w-2xl leading-relaxed" style="color: #E0E4EB;">
+            Use our Retirement Income Gap Calculator and the Income Shock Assessment on the Resources page to surface blind spots early. Then decide what deserves a deeper conversation.
           </p>
         </div>
-        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
           <a
             href="/resources"
             class="inline-flex items-center justify-center px-7 py-4 font-bold rounded-lg text-base transition-all duration-300 hover:brightness-110 hover:scale-[1.02] shadow-lg w-full md:w-auto"
             style="background-color: #CCA03F; color: #FFFFFF;"
           >
-            Try the Interactive Tools
+            Open interactive tools
           </a>
           <a
             href="/book"
             class="inline-flex items-center justify-center px-7 py-4 font-bold rounded-lg text-base transition-all duration-300 hover:bg-white/10 border border-white/20 w-full md:w-auto"
             style="color: #FFFFFF;"
           >
-            Book a Strategy Session
+            Talk through your results
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Problem & Solution -->
-  <section class="py-20 bg-slate-50">
+  <!-- 4. Human trust -->
+  <section class="py-20 bg-white border-t border-slate-100" aria-labelledby="meet-koumba">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-extrabold text-slate-900">Why Infinite Wealth Academy Exists</h2>
-        <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-          Financial confusion is costing families security. Traditional advice often overlooks protection and flexibility. Project 500 Families is about changing that.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-          <h3 class="text-2xl font-bold text-slate-900 mb-6 border-b border-amber-200 pb-4">Financial Risks Most Families Don't See Coming</h3>
-          <ul class="space-y-4 text-slate-600 font-medium">
-            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> What happens to retirement accounts after leaving a job</li>
-            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Why many families are underinsured</li>
-            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> The retirement income gap</li>
-            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> The difference between saving and positioning</li>
-          </ul>
+      <p class="text-center font-semibold text-xs uppercase tracking-[0.22em] mb-3" style="color: #B8860B;">
+        Your guide
+      </p>
+      <h2 id="meet-koumba" class="text-3xl md:text-4xl font-extrabold text-slate-900 text-center mb-4">
+        Meet Koumba
+      </h2>
+      <p class="text-center text-slate-600 max-w-2xl mx-auto mb-14 text-lg">
+        You are not handed off to a script. You work with someone who listens first—then helps you see your options clearly.
+      </p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
+        <div class="flex flex-col items-center lg:items-start">
+          <img
+            loading="lazy"
+            class="w-44 h-44 rounded-full object-cover border-4 border-amber-500 shadow-lg mb-6"
+            src="/koumba-portrait.webp.jpg"
+            alt="Koumba R Koundouno, Founder and Financial Professional at Infinite Wealth Academy"
+          />
+          <h3 class="text-2xl font-bold text-slate-900 text-center lg:text-left">Koumba R Koundouno</h3>
+          <p class="text-amber-600 font-bold text-sm uppercase tracking-wider mt-1 text-center lg:text-left">Founder &amp; Financial Professional</p>
+          <a
+            href="https://www.linkedin.com/in/koumba-koundouno-infinite-wealth-academy-403921377/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-5 inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-slate-600 text-sm font-medium transition-colors hover:border-amber-500 hover:text-amber-700"
+            aria-label="Koumba R Koundouno on LinkedIn"
+          >
+            <svg class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.345V9h3.414v1.561h.05c.476-.9 1.637-1.85 3.37-1.85 3.603 0 4.268 2.372 4.268 5.456v6.285zM5.337 7.433a2.063 2.063 0 1 1 .001-4.126 2.063 2.063 0 0 1-.001 4.126zM7.119 20.452H3.556V9h3.563v11.452z" />
+            </svg>
+            Connect on LinkedIn
+          </a>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-          <h3 class="text-2xl font-bold text-slate-900 mb-6 border-b border-amber-200 pb-4">Financial Protection Should Be Simple</h3>
-          <ul class="space-y-4 text-slate-600 font-medium">
-            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Income protection</li>
-            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Tax-advantaged strategies</li>
-            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Living benefits</li>
-            <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> Retirement income flexibility</li>
-          </ul>
+        <div>
+          <blockquote class="text-slate-700 leading-relaxed text-lg italic border-l-4 pl-6" style="border-color: #CCA03F;">
+            I believe every family deserves to understand their financial future. I work with individuals, professionals, and business owners to simplify financial protection strategies and create plans that adapt to life&apos;s changes. Through education and thoughtful guidance, I help families move from uncertainty to clarity and confidence.
+          </blockquote>
+          <p class="mt-6 text-slate-600 leading-relaxed">
+            Koumba focuses on protection planning and financial education—not noise. Her process is built around your questions, your priorities, and your timeline—so decisions feel grounded, not rushed.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <OfferingsGrid />
+  <!-- 5. Conversion: conversation offer -->
+  <section class="py-16 md:py-20" style="background-color: #1A2C46;" aria-labelledby="strategy-call">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="font-semibold text-xs uppercase tracking-[0.22em] mb-3" style="color: #CCA03F;">Ready when you are</p>
+        <h2 id="strategy-call" class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+          Complimentary strategy conversation
+        </h2>
+        <p class="mt-5 text-lg leading-relaxed" style="color: #E0E4EB;">
+          No pressure, no jargon wall. A structured conversation to understand where you are, what worries you most, and what a realistic next step looks like.
+        </p>
+        <ul class="mt-8 text-left max-w-xl mx-auto space-y-3" style="color: #E0E4EB;">
+          <li class="flex gap-2"><span class="text-amber-400 shrink-0">✓</span> A clearer picture of gaps that often hide in plain sight</li>
+          <li class="flex gap-2"><span class="text-amber-400 shrink-0">✓</span> Plain-language context so you can compare options with confidence</li>
+          <li class="flex gap-2"><span class="text-amber-400 shrink-0">✓</span> A recommended path forward—optimization, protection, or staying the course</li>
+        </ul>
+        <div class="mt-10">
+          <a
+            href="/book"
+            class="inline-flex items-center justify-center px-8 py-4 font-bold rounded-lg text-lg transition-all duration-300 hover:brightness-110 hover:scale-[1.02] shadow-lg"
+            style="background-color: #CCA03F; color: #FFFFFF;"
+          >
+            Book your conversation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Reviews Flow -->
-  <section class="reviews-section py-24 text-white overflow-hidden">
+  <!-- 6. Social proof — last beat before footer -->
+  <section class="reviews-section py-24 text-white overflow-hidden" aria-labelledby="testimonials-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <p class="text-amber-400 tracking-[0.22em] uppercase text-xs font-semibold">Client Reviews</p>
-        <h2 class="mt-4 text-3xl md:text-4xl font-extrabold">Client Reviews for Koumba</h2>
+        <p class="text-amber-400 tracking-[0.22em] uppercase text-xs font-semibold">Client stories</p>
+        <h2 id="testimonials-heading" class="mt-4 text-3xl md:text-4xl font-extrabold">What people say about working with Koumba</h2>
       </div>
 
       <div class="reviews-flow relative">
@@ -199,8 +278,6 @@ const clientReviews = [
       </div>
     </div>
   </section>
-
-  <TeamGrid />
 </GlobalLayout>
 
 <style>
