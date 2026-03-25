@@ -46,7 +46,9 @@ import GlobalLayout from '../../layouts/GlobalLayout.astro';
 
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border-b-4 border-transparent hover:border-amber-500 flex flex-col">
-          <img loading="lazy" src="/audience-family.png" alt="Famille examinant des plans" class="w-full h-48 object-cover" />
+          <div class="relative aspect-[5/4] w-full shrink-0 overflow-hidden bg-slate-200/80 md:aspect-[16/10] xl:aspect-[5/4]">
+            <img loading="lazy" src="/audience-family.png" alt="Famille examinant des plans" class="absolute inset-0 h-full w-full object-cover [object-position:center_15%] md:[object-position:center_18%]" />
+          </div>
           <div class="p-8 flex-grow">
             <h3 class="text-xl font-bold text-slate-900 mb-3">Familles</h3>
             <p class="text-slate-600 leading-relaxed text-sm">
@@ -56,7 +58,9 @@ import GlobalLayout from '../../layouts/GlobalLayout.astro';
         </div>
 
         <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border-b-4 border-transparent hover:border-amber-500 flex flex-col">
-          <img loading="lazy" src="/audience-individual.png" alt="Personne lisant des documents" class="w-full h-48 object-cover" />
+          <div class="relative aspect-[5/4] w-full shrink-0 overflow-hidden bg-slate-200/80 md:aspect-[16/10] xl:aspect-[5/4]">
+            <img loading="lazy" src="/audience-individual.png" alt="Personne lisant des documents" class="absolute inset-0 h-full w-full object-cover [object-position:center_12%] md:[object-position:center_15%]" />
+          </div>
           <div class="p-8 flex-grow">
             <h3 class="text-xl font-bold text-slate-900 mb-3">Individus</h3>
             <p class="text-slate-600 leading-relaxed text-sm">
@@ -66,7 +70,9 @@ import GlobalLayout from '../../layouts/GlobalLayout.astro';
         </div>
 
         <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border-b-4 border-transparent hover:border-amber-500 flex flex-col">
-          <img loading="lazy" src="/audience-professional.png" alt="Professionnel dans un bureau moderne" class="w-full h-48 object-cover" />
+          <div class="relative aspect-[5/4] w-full shrink-0 overflow-hidden bg-slate-200/80 md:aspect-[16/10] xl:aspect-[5/4]">
+            <img loading="lazy" src="/audience-professional.png" alt="Professionnel dans un bureau moderne" class="absolute inset-0 h-full w-full object-cover [object-position:center_12%] md:[object-position:center_16%]" />
+          </div>
           <div class="p-8 flex-grow">
             <h3 class="text-xl font-bold text-slate-900 mb-3">Professionnels</h3>
             <p class="text-slate-600 leading-relaxed text-sm">
@@ -76,7 +82,9 @@ import GlobalLayout from '../../layouts/GlobalLayout.astro';
         </div>
 
         <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border-b-4 border-transparent hover:border-amber-500 flex flex-col">
-          <img loading="lazy" src="/audience-business.png" alt="Entrepreneur confiant" class="w-full h-48 object-cover" />
+          <div class="relative aspect-[5/4] w-full shrink-0 overflow-hidden bg-slate-200/80 md:aspect-[16/10] xl:aspect-[5/4]">
+            <img loading="lazy" src="/audience-business.png" alt="Entrepreneur confiant" class="absolute inset-0 h-full w-full object-cover [object-position:center_12%] md:[object-position:center_16%]" />
+          </div>
           <div class="p-8 flex-grow">
             <h3 class="text-xl font-bold text-slate-900 mb-3">Entrepreneurs</h3>
             <p class="text-slate-600 leading-relaxed text-sm">
@@ -116,7 +124,7 @@ import GlobalLayout from '../../layouts/GlobalLayout.astro';
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
         <div class="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 order-2 lg:order-1">
-          <img src="/3.png" alt="Bâtir la richesse et la retraite" class="w-full h-80 object-cover" loading="lazy" />
+          <img src="/3.png" alt="Bâtir la richesse et la retraite" class="h-80 w-full object-cover [object-position:center_20%]" loading="lazy" />
         </div>
         <div class="order-1 lg:order-2">
           <h3 class="text-2xl font-bold text-slate-900 mb-4">Bâtir la richesse et la retraite</h3>
@@ -133,12 +141,12 @@ import GlobalLayout from '../../layouts/GlobalLayout.astro';
           </p>
         </div>
         <div class="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200">
-          <img src="/5.png" alt="Le pouvoir du choix" class="w-full h-80 object-cover" loading="lazy" />
+          <img src="/5.png" alt="Le pouvoir du choix" class="h-80 w-full object-cover [object-position:center_18%]" loading="lazy" />
         </div>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 order-2 lg:order-1">
-          <img src="/8.png" alt="Préserver un héritage durable" class="w-full h-80 object-cover" loading="lazy" />
+          <img src="/8.png" alt="Préserver un héritage durable" class="h-80 w-full object-cover [object-position:center_18%]" loading="lazy" />
         </div>
         <div class="order-1 lg:order-2">
           <h3 class="text-2xl font-bold text-slate-900 mb-4">Préserver un héritage durable</h3>
