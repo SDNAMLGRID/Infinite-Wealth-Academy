@@ -5,15 +5,14 @@ import TeamGrid from '../../components/TeamGrid.astro';
 
 <GlobalLayout
   title="Notre mission | Infinite Wealth Academy"
-  description="Notre mission : protéger 500 familles d'ici 2027. L'éducation d'abord, une protection stratégique et des stratégies durables. Partenariat avec Infinite Wealth Academy."
+  description="Notre mission : protéger 500 familles d'ici décembre 2026. L'éducation d'abord, une protection stratégique et des stratégies durables. Partenariat avec Infinite Wealth Academy."
 >
-  <section class="relative overflow-hidden border-b border-amber-500/20 bg-slate-900 text-white py-20 lg:py-28">
-    <!-- Hero mission : image en élément DOM pour chargement et affichage fiables -->
+  <section class="relative flex min-h-[min(78vh,820px)] flex-col justify-center overflow-hidden border-b border-amber-500/20 bg-slate-900 py-24 text-white lg:py-32">
+    <!-- Hero : hauteur min. + position haute de l'image pour garder les visages visibles -->
     <img
       src="/our-mission.png"
       alt=""
-      class="absolute inset-0 z-0 w-full h-full object-cover object-center"
-      style="transform: scale(0.92); transform-origin: center center;"
+      class="absolute inset-0 z-0 h-full w-full object-cover [object-position:center_18%] sm:[object-position:center_22%] lg:[object-position:center_25%]"
       loading="eager"
       fetchpriority="high"
       aria-hidden="true"
@@ -41,7 +40,7 @@ import TeamGrid from '../../components/TeamGrid.astro';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
         <div class="mb-12 lg:mb-0">
-          <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Notre mission : protéger 500 familles d'ici 2027</h2>
+          <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Notre mission : protéger 500 familles d'ici décembre 2026</h2>
           <p class="text-lg text-slate-600 leading-relaxed mb-6">
             Là où la clarté financière rencontre la sécurité familiale. Infinite Wealth Academy aide les familles à créer des bases solides grâce à l'éducation, à la planification de protection et à des stratégies durables.
           </p>
